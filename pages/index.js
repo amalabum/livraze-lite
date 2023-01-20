@@ -78,9 +78,9 @@ export default function Home() {
         </div>
         <div className={styles.our_collection}>
           <div className={styles.default_div_fo_libs}>
-            <div className={styles.top_cinq_titre}>
+            <div className={styles.section_title}>
               <h2> La collection la plus consultée</h2>
-              Tous nos nos livres sont en dur ...
+              Un livre, une inspiration ...
             </div>
             <br />
             <Carte_pour_livre
