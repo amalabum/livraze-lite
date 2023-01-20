@@ -294,14 +294,12 @@
 .our_collection {
   display: flex;
   flex-direction: column;
-
+  background-color: #f9f9f9;
   align-items: center;
   position: relative;
   min-height: 460px;
 
   width: 100%;
-
-  background-color: #f9f9f9;
 }
 .collections {
   position: relative;
@@ -309,8 +307,87 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
+  margin-bottom: 10px;
   width: 100%;
+}
+.default_div_fo_libs {
+  position: relative;
+  width: 65%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.Carte_pour_livre {
+  position: relative;
+  width: 180px;
+  height: auto;
+
+  margin-left: 20px;
+  margin-bottom: 80px;
+
+  display: inline-block;
+}
+.Carte_pour_livre_header {
+  position: relative;
+  width: 100%;
+  height: 60px;
+
+  padding-left: 5px;
+  padding-right: 5px;
+  float: left;
+
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  padding-bottom: 10px;
+}
+.Carte_pour_livre_section1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.Carte_pour_livre_footer {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+.Carte_pour_livre_footer a {
+  /* margin-left: 20px; */
+  padding: 9px 19px;
+  cursor: pointer;
+  border-radius: 6px;
+  /* border: 1px solid rgb(94, 94, 98); */
+}
+.Carte_pour_livre_section2 {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.Carte_pour_livre_section1 img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.Carte_pour_livre_containt {
+  width: 100%;
+  /* height: 260px; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.Carte_pour_livre_containt img {
+  /* height: 250px; */
+  width: 90%;
+  transform: scale(1);
 }
 
 .collections_list {

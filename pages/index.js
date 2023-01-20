@@ -8,6 +8,7 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Item_top_5 from "@/components/compsants_standards";
 import List_items from "@/components/List_items";
+import Carte_pour_livre from "@/components/collection_congolaise";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,11 +49,26 @@ export default function Home() {
             </div>
             <div className={styles.top_cinq_list}>
               <div className={styles.top_cinq_list_livre}>
-                <Item_top_5> </Item_top_5>
-                <Item_top_5> </Item_top_5>
-                <Item_top_5> </Item_top_5>
-                <Item_top_5> </Item_top_5>
-                <Item_top_5> </Item_top_5>
+                <Carte_pour_livre
+                  auteur_img_src="/cover.png"
+                  auteur_alt="livre d'un putin d'auteur congolais"
+                  livre_img_src="/top_5/5.png"
+                />
+                <Carte_pour_livre
+                  auteur_img_src="/cover.png"
+                  auteur_alt="livre d'un putin d'auteur congolais"
+                  livre_img_src="/top_5/2.png"
+                />
+                <Carte_pour_livre
+                  auteur_img_src="/cover.png"
+                  auteur_alt="livre d'un putin d'auteur congolais"
+                  livre_img_src="/top_5/3.png"
+                />
+                <Carte_pour_livre
+                  auteur_img_src="/cover.png"
+                  auteur_alt="livre d'un putin d'auteur congolais"
+                  livre_img_src="/top_5/3.png"
+                />
               </div>
             </div>
           </div>
@@ -61,23 +77,43 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.our_collection}>
-          <div className={styles.collections_list}>
+          <div className={styles.default_div_fo_libs}>
             <div className={styles.top_cinq_titre}>
-              <h2> Toutes collections </h2>
-              Des livres en dur ... <br />
-              des auteurs congolais, des auteurs d'un peu partout c'est sur
-              livraze <br />
-              <br />
-              <br />
-              <a className="Voir_toutes_nos_collections" href="">
-                Voir toutes nos collections →
-              </a>
+              <h2> La collection la plus consultée</h2>
+              Tous nos nos livres sont en dur ...
             </div>
-            <List_items> </List_items>
-            <List_items> </List_items>
-            <List_items> </List_items>
-            <List_items> </List_items>
+            <br />
+            <Carte_pour_livre
+              auteur_img_src="/hero2.jpg"
+              livraze_alt="livre d'un putin d'auteur congolais"
+              livre_img_src="/top_5/1.png"
+            />
+            <Carte_pour_livre
+              auteur_img_src="/cover.png"
+              auteur_alt="livre d'un putin d'auteur congolais"
+              livre_img_src="/top_5/2.png"
+            />
+            <Carte_pour_livre
+              auteur_img_src="/cover.png"
+              auteur_alt="livre d'un putin d'auteur congolais"
+              livre_img_src="/top_5/4.png"
+            />
+            <Carte_pour_livre
+              auteur_img_src="/cover.png"
+              auteur_alt="livre d'un putin d'auteur congolais"
+              livre_img_src="/top_5/5.png"
+            />
+            <Carte_pour_livre
+              auteur_img_src="/cover.png"
+              auteur_alt="livre d'un putin d'auteur congolais"
+              livre_img_src="/top_5/5.png"
+            />
           </div>
+          <a href="" className={styles.proposal_action}>
+            Voir toutes nos collections →
+          </a>
+          <br />
+          <br />
         </div>
         <Footer> </Footer>
         <Copyright> </Copyright>

@@ -6,7 +6,7 @@ import Navbar from "../components/header";
 import Other_banner from "@/components/other_banner";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import carte_pour_livre from "@/components/collection_congolaise";
+import Carte_pour_livre from "@/components/collection_congolaise";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,16 +20,58 @@ export default function partenariat() {
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
       <main className={styles.main}>
-        <Navbar></Navbar>
+        <Navbar />
         <Other_banner
-          title="Partenariat"
+          title="Collection congolaise"
           subtitle="Bienvenue sur notre portail de partenariat"
           action="Devenir partenaire"
-        ></Other_banner>
-        <div className={styles.default_div}></div>
+        />
 
-        <Footer> </Footer>
-        <Copyright> </Copyright>
+        <div className={styles.default_div_fo_libs}>
+          <div className={styles.top_cinq_titre}>
+            <h2> La collection la plus consultée</h2>
+            Tous nos nos livres sont en dur ...
+          </div>
+          <br />
+          <Carte_pour_livre
+            auteur_img_src="/hero2.jpg"
+            livraze_alt="livre d'un putin d'auteur congolais"
+            livre_img_src="/top_5/1.png"
+          />
+          <Carte_pour_livre
+            auteur_img_src="/cover.png"
+            auteur_alt="livre d'un putin d'auteur congolais"
+            livre_img_src="/top_5/2.png"
+          />
+          <Carte_pour_livre
+            auteur_img_src="/cover.png"
+            auteur_alt="livre d'un putin d'auteur congolais"
+            livre_img_src="/top_5/4.png"
+          />
+          <Carte_pour_livre
+            auteur_img_src="/cover.png"
+            auteur_alt="livre d'un putin d'auteur congolais"
+            livre_img_src="/top_5/5.png"
+          />
+          <Carte_pour_livre
+            auteur_img_src="/cover.png"
+            auteur_alt="livre d'un putin d'auteur congolais"
+            livre_img_src="/top_5/5.png"
+          />
+          <Carte_pour_livre
+            auteur_img_src="/cover.png"
+            auteur_alt="livre d'un putin d'auteur congolais"
+            livre_img_src="/top_5/5.png"
+          />
+          <Carte_pour_livre
+            auteur_img_src="/cover.png"
+            auteur_alt="livre d'un putin d'auteur congolais"
+            livre_img_src="/top_5/5.png"
+          />
+        </div>
+
+        <Footer />
+        <Copyright />
       </main>
     </>
   );
