@@ -22,21 +22,45 @@ export default function partenariat() {
       <main className={styles.main}>
         <Navbar />
         <Other_banner
-          title="Collection congolaise"
-          subtitle=""
-          action="Je m'abonnes"
+          title="Collections"
+          subtitle="Collections / congolaise"
+          action="Profitez de l'offre"
         />
         <div className={styles.collections_n}>
+          <div className={styles.collections_n_section2}>
+            <h4>Toutes les categories </h4>
+            <ul href="" className={styles.liste_des_categorie}>
+              <a>
+                <li>
+                  Droit
+                  <span>(2)</span>
+                </li>
+              </a>
+              <a>
+                <li>
+                  Economie
+                  <span>(2)</span>
+                </li>
+              </a>
+              <a>
+                <li>
+                  Socilogie
+                  <span>(2)</span>
+                </li>
+              </a>
+            </ul>
+            <img src="/zigler.jpeg" alt="" />
+          </div>
           <div className={styles.collections_n_section1}>
             <div className={styles.livre_n}>
               <div className={styles.livre_n_img}>
-                <img src="/top_5/5.png" alt="" />
+                <img src="/top_5/zigler.jpeg" alt="" />
               </div>
               <div className={styles.livre_n_containt}>
-                <h3> JUSQU’AU COU : ENQUÊTE SUR LA DETTE DU TIERS MONDE</h3>
+                <h3> LE MARXISME A-T-IL UN SENS POUR LE SUD ?</h3>
                 <div className={styles.Carte_pour_livre_header}>
                   <div className={styles.Carte_pour_livre_section1}>
-                    <img src="/hero2.jpg" alt="" />
+                    <img src="/icons/auteur_ic.png" alt="" />
                     Auteur : ELiezer K. mubalama
                     <h4>#droit, #Sociologie </h4>
                   </div>
@@ -46,9 +70,76 @@ export default function partenariat() {
                 source, très souvent...
                 <br />
                 <br />
-                <a href="" className={styles.Carte_pour_livre_a}>
-                  Voir la synthese →
-                </a>
+                <div className={styles.Carte_pour_livre_footer_n}>
+                  <a href="" className={styles.Carte_pour_livre_a}>
+                    Details
+                  </a>
+                  <a href="" className={styles.whatsapp}>
+                    <img src="/icons/ic_lov.png" alt="" />
+                    <span> je veux lire ce livre </span>
+                  </a>
+                  <a href="" className={styles.whatsapp}></a>
+                </div>
+              </div>
+            </div>
+            <div className={styles.livre_n}>
+              <div className={styles.livre_n_img}>
+                <img src="/top_5/3.png" alt="" />
+              </div>
+              <div className={styles.livre_n_containt}>
+                <h3> JUSQU’AU COU : ENQUÊTE SUR LA DETTE DU TIERS MONDE</h3>
+                <div className={styles.Carte_pour_livre_header}>
+                  <div className={styles.Carte_pour_livre_section1}>
+                    <img src="/icons/auteur_ic.png" alt="" />
+                    Auteur : ELiezer K. mubalama
+                    <h4>#droit, #Sociologie </h4>
+                  </div>
+                </div>
+                L'incurie que la haute hiérarchie reproche aux responsables des
+                offices du Ministère public - entendez les parquets - tire sa
+                source, très souvent...
+                <br />
+                <br />
+                <div className={styles.Carte_pour_livre_footer_n}>
+                  <a href="" className={styles.Carte_pour_livre_a}>
+                    Details
+                  </a>
+                  <a href="" className={styles.whatsapp}>
+                    <img src="/icons/ic_lov.png" alt="" />
+                    <span> je veux lire ce livre </span>
+                  </a>
+                  <a href="" className={styles.whatsapp}></a>
+                </div>
+              </div>
+            </div>
+            <div className={styles.livre_n}>
+              <div className={styles.livre_n_img}>
+                <img src="/top_5/5.png" alt="" />
+              </div>
+              <div className={styles.livre_n_containt}>
+                <h3> JUSQU’AU COU : ENQUÊTE SUR LA DETTE DU TIERS MONDE</h3>
+                <div className={styles.Carte_pour_livre_header}>
+                  <div className={styles.Carte_pour_livre_section1}>
+                    <img src="/icons/auteur_ic.png" alt="" />
+                    Auteur : ELiezer K. mubalama
+                    <h4>#droit, #Sociologie </h4>
+                  </div>
+                </div>
+                L'incurie que la haute hiérarchie reproche aux responsables des
+                offices du Ministère public - entendez les parquets - tire sa
+                source, très souvent...
+                <br />
+                <br />
+                <div className={styles.Carte_pour_livre_footer_n}>
+                  <a href="" className={styles.Carte_pour_livre_a}>
+                    Details
+                  </a>
+                  <a href="" className={styles.whatsapp}>
+                    <img src="/icons/ic_lov.png" alt="" />
+                    <span> je veux lire ce livre </span>
+                  </a>
+                  <a href="" className={styles.whatsapp}></a>
+                </div>
               </div>
             </div>
             <div className={styles.livre_n}>
@@ -59,7 +150,7 @@ export default function partenariat() {
                 <h3> JUSQU’AU COU : inventeurs en inventions</h3>
                 <div className={styles.Carte_pour_livre_header}>
                   <div className={styles.Carte_pour_livre_section1}>
-                    <img src="/hero2.jpg" alt="" />
+                    <img src="/icons/auteur_ic.png" alt="" />
                     Auteur : ELiezer K. mubalama
                     <h4>#Sociologie </h4>
                   </div>
@@ -69,19 +160,18 @@ export default function partenariat() {
                 source, très souvent, ...
                 <br />
                 <br />
-                <a href="" className={styles.Carte_pour_livre_a}>
-                  Voir la synthese →
-                </a>
+                <div className={styles.Carte_pour_livre_footer_n}>
+                  <a href="" className={styles.Carte_pour_livre_a}>
+                    Details
+                  </a>
+                  <a href="" className={styles.whatsapp}>
+                    <img src="/icons/ic_lov.png" alt="" />
+                    <span> je veux lire ce livre </span>
+                  </a>
+                  <a href="" className={styles.whatsapp}></a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className={styles.collections_n_section2}>
-            <img src="/00.png" alt="" />
-
-            <ul href="" className={styles.liste_des_categorie}>
-              <li>Droit</li>
-              <li>Sociologie</li>
-            </ul>
           </div>
         </div>
 
@@ -92,27 +182,27 @@ export default function partenariat() {
           </div>
           <br />
           <Carte_pour_livre
-            auteur_img_src="/hero2.jpg"
+            auteur_img_src="/icons/auteur_ic.png"
             livraze_alt="livre d'un putin d'auteur congolais"
             livre_img_src="/top_5/2.png"
           />
           <Carte_pour_livre
-            auteur_img_src="/cover.png"
+            auteur_img_src="/icons/auteur_ic.png"
             auteur_alt="livre d'un putin d'auteur congolais"
             livre_img_src="/top_5/2.png"
           />
           <Carte_pour_livre
-            auteur_img_src="/cover.png"
+            auteur_img_src="/icons/auteur_ic.png"
             auteur_alt="livre d'un putin d'auteur congolais"
             livre_img_src="/top_5/4.png"
           />
           <Carte_pour_livre
-            auteur_img_src="/cover.png"
+            auteur_img_src="/icons/auteur_ic.png"
             auteur_alt="livre d'un putin d'auteur congolais"
             livre_img_src="/top_5/5.png"
           />
           <Carte_pour_livre
-            auteur_img_src="/cover.png"
+            auteur_img_src="/icons/auteur_ic.png"
             auteur_alt="livre d'un putin d'auteur congolais"
             livre_img_src="/top_5/5.png"
           />

@@ -95,7 +95,7 @@
   color: black;
 }
 .cover_bloc {
-  background-image: url("/our_lib.png");
+  background-image: url("/back.png");
 }
 .cover_bloc_soiré {
   background-image: url("/prese.jpg");
@@ -352,6 +352,33 @@
   margin-top: 20px;
   padding-left: 10px;
 }
+.Carte_pour_livre_footer_n {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  padding-left: 10px;
+  display: flex;
+}
+
+.Carte_pour_livre_footer_n a {
+  margin-left: 20px;
+  width: auto;
+
+  text-align: justify;
+}
+.whatsapp span {
+  position: absolute;
+  top: 2px;
+}
+.whatsapp {
+  width: 200px;
+}
+.whatsapp img {
+  margin-right: 10px;
+}
+.Carte_pour_livre_footer_n a img {
+  width: 28px;
+}
 .Carte_pour_livre_footer a {
   /* margin-left: 20px; */
   padding: 9px 19px;
@@ -391,11 +418,16 @@
   overflow: hidden;
 }
 .Carte_pour_livre_containt img {
-  /* height: 250px; */
-  width: 90%;
+  height: 250px;
+
   transform: scale(1);
 }
-
+.default_div_fo_libs_container {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  margin-top: 60px;
+  border-radius: 30px 30px 0px 0px;
+}
 .collections_list {
   margin-top: 70px;
   position: relative;
@@ -478,15 +510,14 @@
 }
 .collections_n {
   position: relative;
-  width: 64%;
-  margin-top: -70px;
-  background-color: #f7f7f7;
+  width: 69%;
+  margin-top: 10px;
   z-index: 12;
   display: flex;
   padding-top: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 10px 10px 0 0;
+  text-align: justify;
 }
 .livre_n {
   width: 100%;
@@ -494,24 +525,53 @@
   display: flex;
   margin-bottom: 30px;
 }
+.livre_x {
+  width: 100%;
+
+  display: flex;
+  margin-bottom: 30px;
+}
+.livre_n_img img {
+  width: 90%;
+}
+.cover_bloc_title_n {
+  font-size: 26px;
+}
+.livre_n_details {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+}
 .livre_n_containt h3 {
   text-transform: lowercase;
   margin-bottom: 8px;
-  font-size: 21px;
+  font-size: 19px;
+}
+.Carte_pour_livre_section1 h4 {
+  color: hwb(5 27% 14%);
+  text-decoration: italic;
+  font-size: 12px;
 }
 .livre_n_img {
   width: 30%;
   height: 100%;
-
+  float: left;
   overflow: hidden;
   margin-bottom: 30px;
 }
 .livre_n_containt {
   width: 70%;
   height: 100%;
+  padding-right: 50px;
 }
+
 .livre_n_img img {
   height: 100%;
+  transition: 1s;
+}
+.livre_n_img:hover img {
+  transform: scale(1.2);
+  transform: rotate(360deg);
 }
 .collections_n_section1 {
   position: relative;
@@ -520,12 +580,16 @@
   height: auto;
   float: left;
 }
+
 .collections_n_section2 {
   position: relative;
-  width: 30%;
+  width: 25%;
   height: auto;
   float: left;
-  padding-left: 0px;
+  margin-right: 5%;
+}
+.collections_n_section2 h4 {
+  font-size: 23px;
 }
 .default_div img {
   padding-bottom: 10px;
@@ -535,7 +599,25 @@
 }
 .liste_des_categorie {
   margin-top: 20px;
-  margin-left: 29%;
+
+  margin-bottom: 30px;
+}
+.collections_n_section2 img {
+  justify-self: center;
+  width: 100%;
+}
+.liste_des_categorie a li {
+  margin-top: 20px;
+  list-style-type: none;
+  padding-left: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #d5d1d1;
+  margin-left: 0%;
+}
+.liste_des_categorie span {
+  position: absolute;
+  right: 10px;
+  top: px;
 }
 .default_div ul {
   margin-left: 49px;
@@ -559,14 +641,18 @@
 }
 .Carte_pour_livre_a {
   margin-bottom: 20px;
-  padding: 9px 20px;
-  border: 1px solid #4f4646;
+  padding: 6px 18px;
+  /* border: 1px solid #e54d4d; */
+  /* border-radius: 20px; */
+  transition: 1s;
+  background-color: rgb(20, 18, 18);
+  color: rgb(205, 197, 197);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
 }
-.Carte_pour_livre_a {
-  margin-bottom: 20px;
-  padding: 9px 20px;
-  border-radius: 20px;
-  border: 1px solid #4f4646;
+.Carte_pour_livre_a:hover {
+  border-radius: 5px;
 }
 /* .mybloc {
   position: absolute;
