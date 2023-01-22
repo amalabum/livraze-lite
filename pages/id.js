@@ -127,26 +127,6 @@ export default function partenariat() {
               livraze_alt="livre d'un putin d'auteur congolais"
               livre_img_src="/00.png"
             />
-            <Carte_pour_livre
-              auteur_img_src="/icons/auteur_ic.png"
-              auteur_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/top_5/zigler.jpeg"
-            />
-            <Carte_pour_livre
-              auteur_img_src="/icons/auteur_ic.png"
-              auteur_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/top_5/4.png"
-            />
-            <Carte_pour_livre
-              auteur_img_src="/icons/auteur_ic.png"
-              auteur_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/top_5/5.png"
-            />
-            <Carte_pour_livre
-              auteur_img_src="/icons/auteur_ic.png"
-              auteur_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/top_5/5.png"
-            />
           </div>
         </div>
         <Footer />
