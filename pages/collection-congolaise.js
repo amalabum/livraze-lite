@@ -49,42 +49,12 @@ export default function partenariat() {
                 </li>
               </a>
             </ul>
-            <img src="/zigler.jpeg" alt="" />
+            <img src="/top_5/zigler.jpeg" alt="" />
           </div>
           <div className={styles.collections_n_section1}>
             <div className={styles.livre_n}>
               <div className={styles.livre_n_img}>
-                <img src="/top_5/zigler.jpeg" alt="" />
-              </div>
-              <div className={styles.livre_n_containt}>
-                <h3> LE MARXISME A-T-IL UN SENS POUR LE SUD ?</h3>
-                <div className={styles.Carte_pour_livre_header}>
-                  <div className={styles.Carte_pour_livre_section1}>
-                    <img src="/icons/auteur_ic.png" alt="" />
-                    Auteur : ELiezer K. mubalama
-                    <h4>#droit, #Sociologie </h4>
-                  </div>
-                </div>
-                L'incurie que la haute hiérarchie reproche aux responsables des
-                offices du Ministère public - entendez les parquets - tire sa
-                source, très souvent...
-                <br />
-                <br />
-                <div className={styles.Carte_pour_livre_footer_n}>
-                  <a href="" className={styles.Carte_pour_livre_a}>
-                    Details
-                  </a>
-                  <a href="" className={styles.whatsapp}>
-                    <img src="/icons/ic_lov.png" alt="" />
-                    <span> je veux lire ce livre </span>
-                  </a>
-                  <a href="" className={styles.whatsapp}></a>
-                </div>
-              </div>
-            </div>
-            <div className={styles.livre_n}>
-              <div className={styles.livre_n_img}>
-                <img src="/top_5/zigler.jpeg" alt="" />
+                <img src="/00.png" alt="" />
               </div>
               <div className={styles.livre_n_containt}>
                 <h3> LE MARXISME A-T-IL UN SENS POUR LE SUD ?</h3>

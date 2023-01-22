@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Nav_bar from "../components/navbar";
 import Copyright from "../components/copyright";
 import Footer from "../components/footer";
 import Navbar from "../components/header";
@@ -21,6 +22,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
+      <Nav_bar />
+
       <main className={styles.main}>
         <div className={styles.call_to_action_don_livre}>
           <div className={styles.proposal}>
@@ -36,7 +39,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <Navbar></Navbar>
+
         <div className={styles.app_container}>
           <Main_banner></Main_banner>
           <div className={styles.top_cinq_titre}>

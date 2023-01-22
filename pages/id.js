@@ -29,8 +29,12 @@ export default function partenariat() {
         <div className={styles.collections_n}>
           <div className={styles.collections_n_section1}>
             <div className={styles.livre_n_details}>
-              <div className={styles.livre_n_img}>
-                <img src="/top_5/3.png" className={styles.livre_x_img} alt="" />
+              <div className={styles.livre_n_img_n}>
+                <img
+                  src="/top_5/zigler.jpeg"
+                  className={styles.livre_x_img}
+                  alt=""
+                />
               </div>
               <div className={styles.livre_n_containt}>
                 <h2> </h2>
@@ -48,7 +52,7 @@ export default function partenariat() {
                 les salons VIP 2 de l'agence de communication FIDBA GRAPHICS
                 devant quelques invités et partenaires. NB : La présentation
                 représente 40% des points du concours. Ces points sont répartis
-                équitablement entre les membres de l'équipe. A ce niveau,
+                équitablement entre les membres de l'équipe. A ce niveau.
                 l'étudiant qui n'aura pas lu le travail ou qui sera absent sans
                 raison valable lors de la séance de questions-réponses sera
                 automatiquement éliminé. A l'issue de cette session, la liste
