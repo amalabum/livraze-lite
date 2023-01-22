@@ -67,17 +67,6 @@ export default function partenariat() {
                 <br />
                 <br />
               </div>
-              {/* <div className={styles.Carte_pour_livre_footer_n}>
-                  <a href="" className={styles.Carte_pour_livre_a}>
-                    Details
-                  </a>
-                  <a href="" className={styles.whatsapp}>
-                    <img src="/icons/ic_lov.png" alt="" />
-                    <span> je veux lire ce livre </span>
-                  </a>
-                  <a href="" className={styles.whatsapp}></a>
-                </div> 
-              </div>*/}
             </div>
             <div className={styles.Carte_pour_livre_footer_n}>
               <a href="" className={styles.Carte_pour_livre_a}>
