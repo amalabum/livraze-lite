@@ -7,6 +7,7 @@ import Other_banner from "@/components/other_banner";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Carte_pour_livre from "@/components/collection_congolaise";
+import Nav_bar from "../components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function partenariat() {
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
       <main className={styles.main}>
-        <Navbar />
+        <Nav_bar />
         <Other_banner
           title="Collections"
           subtitle="Collections / congolaise"

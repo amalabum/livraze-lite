@@ -9,6 +9,7 @@ import styles from "@/styles/Home.module.css";
 import Item_top_5 from "@/components/compsants_standards";
 import List_items from "@/components/List_items";
 import Link from "next/link";
+import Nav_bar from "../components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function concours() {
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
       <main className={styles.main}>
-        <Navbar></Navbar>
+        <Nav_bar />
         <Other_banner
           title="Concours"
           subtitle="Nous somme la bibliothèque la plus moderne dans la ville"

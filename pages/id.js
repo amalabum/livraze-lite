@@ -7,6 +7,7 @@ import Other_banner from "@/components/other_banner";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Carte_pour_livre from "@/components/collection_congolaise";
+import Nav_bar from "../components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function partenariat() {
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
       <main className={styles.main}>
-        <Navbar />
+        <Nav_bar />
         <Other_banner
           title_n="JUSQU’AU COU : ENQUÊTE SUR LA DETTE DU TIERS MONDE"
           subtitle="Collections / congolaise"
@@ -41,7 +42,7 @@ export default function partenariat() {
                 <div className={styles.Carte_pour_livre_header}>
                   <div className={styles.Carte_pour_livre_section1}>
                     <img src="/icons/auteur_ic.png" alt="" />
-                    Auteur : ELiezer K. mubalama
+                    Auteur : Nom de l'auteur
                     <h4>#droit, #Sociologie </h4>
                   </div>
                 </div>
@@ -111,6 +112,26 @@ export default function partenariat() {
               Tous nos nos livres sont en dur ...
             </div>
             <br />
+            <Carte_pour_livre
+              auteur_img_src="/icons/auteur_ic.png"
+              livraze_alt="livre d'un putin d'auteur congolais"
+              livre_img_src="/00.png"
+            />
+            <Carte_pour_livre
+              auteur_img_src="/icons/auteur_ic.png"
+              livraze_alt="livre d'un putin d'auteur congolais"
+              livre_img_src="/00.png"
+            />
+            <Carte_pour_livre
+              auteur_img_src="/icons/auteur_ic.png"
+              livraze_alt="livre d'un putin d'auteur congolais"
+              livre_img_src="/00.png"
+            />
+            <Carte_pour_livre
+              auteur_img_src="/icons/auteur_ic.png"
+              livraze_alt="livre d'un putin d'auteur congolais"
+              livre_img_src="/00.png"
+            />
             <Carte_pour_livre
               auteur_img_src="/icons/auteur_ic.png"
               livraze_alt="livre d'un putin d'auteur congolais"

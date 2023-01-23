@@ -6,7 +6,7 @@ const Carte_pour_livre = (propos) => {
       <div className={styles.Carte_pour_livre_header}>
         <div className={styles.Carte_pour_livre_section1}>
           <img src={propos.auteur_img_src} alt={propos.auteur_alt} />
-          Auteur : ELiezer K. mubalama
+          Nom de l' auteur
         </div>
       </div>
       <div className={styles.Carte_pour_livre_containt}>

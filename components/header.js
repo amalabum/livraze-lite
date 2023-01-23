@@ -3,7 +3,9 @@ const Navbar = () => {
   return (
     <div className={styles.standard_header}>
       <div className={styles.logo_img}>
-        <img src="/logo-livraze.png" alt="logo livraze" />
+        <a href="/">
+          <img src="/logo-livraze.png" alt="logo livraze" />
+        </a>
       </div>
       <div className={styles.menu_principal}>
         <ul className="">
@@ -14,7 +16,7 @@ const Navbar = () => {
             <li className="">à propos</li>
           </a>
 
-          <a href="javasrcript:void(0)">
+          <a href="#">
             <li className="">Soirée littéraire</li>
           </a>
           <a href="Collections">

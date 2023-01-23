@@ -8,6 +8,7 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Item_top_5 from "@/components/compsants_standards";
 import List_items from "@/components/List_items";
+import Nav_bar from "../components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function apropos() {
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
       <main className={styles.main}>
-        <Navbar></Navbar>
+        <Nav_bar />
         <Other_banner
           title="à propos "
           subtitle="Nous somme la bibliothèque la plus moderne dans la ville"
