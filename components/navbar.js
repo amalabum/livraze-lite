@@ -13,7 +13,7 @@ function Nav_bar() {
         </a>
       </div>
       <div className={styles.menu_principal}>
-        <Navbar expand="lg">
+        <Navbar expand="lg" className={styles.menu_nd}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -46,6 +46,7 @@ function Nav_bar() {
       </div>
       <div className={styles.recherche_bar}>
         <img src="/search_ic.png" alt="barre de recherche" />
+        {/* <button className={styles.subscribe}> Essayer livraze ! </button> */}
       </div>
     </div>
   );

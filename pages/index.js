@@ -9,11 +9,11 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Item_top_5 from "@/components/compsants_standards";
 import List_items from "@/components/List_items";
+import { useState, useEffect } from "react";
 import Carte_pour_livre from "@/components/collection_congolaise";
+import { post } from "jquery";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export default function Home({ livres }) {
   return (
     <>
       <Head>
@@ -44,7 +44,7 @@ export default function Home() {
           <Main_banner></Main_banner>
           <div className={styles.top_cinq_titre}>
             <h2> La collection la plus consultée</h2>
-            Tous nos nos livres sont en dur ...
+            Tous nos livres sont en dur ...
           </div>
           <div className={styles.relative_bloc}>
             <div className={styles.top_cinq_img}>
@@ -54,23 +54,39 @@ export default function Home() {
               <div className={styles.top_cinq_list_livre}>
                 <Carte_pour_livre
                   auteur_img_src="/cover.png"
+                  nom_auteur="nom de l'auteur"
                   auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/top_5/5.png"
+                  livre_img_src="/00.png"
                 />
                 <Carte_pour_livre
                   auteur_img_src="/cover.png"
+                  nom_auteur="nom de l'auteur"
                   auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/top_5/2.png"
+                  livre_img_src="/00.png"
                 />
                 <Carte_pour_livre
                   auteur_img_src="/cover.png"
+                  nom_auteur="nom de l'auteur"
                   auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/top_5/3.png"
+                  livre_img_src="/00.png"
                 />
                 <Carte_pour_livre
                   auteur_img_src="/cover.png"
+                  nom_auteur="nom de l'auteur"
                   auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/top_5/3.png"
+                  livre_img_src="/00.png"
+                />
+                <Carte_pour_livre
+                  auteur_img_src="/cover.png"
+                  nom_auteur="nom de l'auteur"
+                  auteur_alt="livre d'un putin d'auteur congolais"
+                  livre_img_src="/00.png"
+                />
+                <Carte_pour_livre
+                  auteur_img_src="/cover.png"
+                  nom_auteur="nom de l'auteur"
+                  auteur_alt="livre d'un putin d'auteur congolais"
+                  livre_img_src="/00.png"
                 />
               </div>
             </div>
@@ -86,31 +102,13 @@ export default function Home() {
               Un livre, une inspiration ...
             </div>
             <br />
-            <Carte_pour_livre
-              auteur_img_src="/hero2.jpg"
-              livraze_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/top_5/1.png"
-            />
+            {Object.entries(livres).map((x) => console.log(x))}
             <Carte_pour_livre
               auteur_img_src="/cover.png"
-              auteur_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/top_5/2.png"
+              // nom_auteur={x.titre}
+              livre_img_src="/00.png"
             />
-            <Carte_pour_livre
-              auteur_img_src="/cover.png"
-              auteur_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/top_5/4.png"
-            />
-            <Carte_pour_livre
-              auteur_img_src="/cover.png"
-              auteur_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/top_5/5.png"
-            />
-            <Carte_pour_livre
-              auteur_img_src="/cover.png"
-              auteur_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/top_5/5.png"
-            />
+            ;
           </div>
           <a href="" className={styles.proposal_action}>
             Voir toutes nos collections →
@@ -124,3 +122,17 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch(
+    "http://localhost/fidbagraphicsApi-v1-0/?key=98986Z_HCC8765&datas=livres"
+  );
+
+  const livres = await res.json();
+
+  return {
+    props: {
+      livres,
+    },
+  };
+};
