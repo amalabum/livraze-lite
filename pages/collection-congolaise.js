@@ -11,7 +11,7 @@ import Nav_bar from "../components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function partenariat() {
+export default function livres({ livres }) {
   return (
     <>
       <Head>
@@ -53,66 +53,40 @@ export default function partenariat() {
             <img src="/top_5/zigler.jpeg" alt="" />
           </div>
           <div className={styles.collections_n_section1}>
-            <div className={styles.livre_n}>
-              <div className={styles.livre_n_img}>
-                <img src="/00.png" alt="" />
-              </div>
-              <div className={styles.livre_n_containt}>
-                <h3> LE MARXISME A-T-IL UN SENS POUR LE SUD ?</h3>
-                <div className={styles.Carte_pour_livre_header}>
-                  <div className={styles.Carte_pour_livre_section1}>
-                    <img src="/icons/auteur_ic.png" alt="" />
-                    Auteur : ELiezer K. mubalama
-                    <h4>#droit, #Sociologie </h4>
+            {livres?.livres?.map((item, index) => (
+              <div className={styles.livre_n}>
+                <div className={styles.livre_n_img}>
+                  <img
+                    src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
+                    alt=""
+                  />
+                </div>
+                <div className={styles.livre_n_containt}>
+                  <h3> {item.titre}</h3>
+                  <div className={styles.Carte_pour_livre_header}>
+                    <div className={styles.Carte_pour_livre_section1}>
+                      <img src="/icons/auteur_ic.png" alt="" />
+                      Auteur :{item.auteur}
+                      <h4>#droit, #Sociologie </h4>
+                    </div>
+                  </div>
+
+                  {item.synthese.substr(1, 90)}
+                  <br />
+                  <br />
+                  <div className={styles.Carte_pour_livre_footer_n}>
+                    <a href="" className={styles.Carte_pour_livre_a}>
+                      Details
+                    </a>
+                    <a href="" className={styles.whatsapp}>
+                      <img src="/icons/ic_lov.png" alt="" />
+                      <span> je veux lire ce livre </span>
+                    </a>
+                    <a href="" className={styles.whatsapp}></a>
                   </div>
                 </div>
-                L'incurie que la haute hiérarchie reproche aux responsables des
-                offices du Ministère public - entendez les parquets - tire sa
-                source, très souvent...
-                <br />
-                <br />
-                <div className={styles.Carte_pour_livre_footer_n}>
-                  <a href="" className={styles.Carte_pour_livre_a}>
-                    Details
-                  </a>
-                  <a href="" className={styles.whatsapp}>
-                    <img src="/icons/ic_lov.png" alt="" />
-                    <span> je veux lire ce livre </span>
-                  </a>
-                  <a href="" className={styles.whatsapp}></a>
-                </div>
               </div>
-            </div>
-            <div className={styles.livre_n}>
-              <div className={styles.livre_n_img}>
-                <img src="/00.png" alt="" />
-              </div>
-              <div className={styles.livre_n_containt}>
-                <h3> LE MARXISME A-T-IL UN SENS POUR LE SUD ?</h3>
-                <div className={styles.Carte_pour_livre_header}>
-                  <div className={styles.Carte_pour_livre_section1}>
-                    <img src="/icons/auteur_ic.png" alt="" />
-                    Auteur : ELiezer K. mubalama
-                    <h4>#droit, #Sociologie </h4>
-                  </div>
-                </div>
-                L'incurie que la haute hiérarchie reproche aux responsables des
-                offices du Ministère public - entendez les parquets - tire sa
-                source, très souvent...
-                <br />
-                <br />
-                <div className={styles.Carte_pour_livre_footer_n}>
-                  <a href="" className={styles.Carte_pour_livre_a}>
-                    Details
-                  </a>
-                  <a href="" className={styles.whatsapp}>
-                    <img src="/icons/ic_lov.png" alt="" />
-                    <span> je veux lire ce livre </span>
-                  </a>
-                  <a href="" className={styles.whatsapp}></a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -139,3 +113,18 @@ export default function partenariat() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch(
+    "http://localhost/fidbagraphicsApi-v1-0/?key=98986Z_HCC8765&datas=livres"
+  );
+
+  const livres = await res.json();
+  console.log("livres colle", livres);
+
+  return {
+    props: {
+      livres,
+    },
+  };
+};

@@ -52,42 +52,14 @@ export default function Home({ livres }) {
             </div>
             <div className={styles.top_cinq_list}>
               <div className={styles.top_cinq_list_livre}>
-                <Carte_pour_livre
-                  auteur_img_src="/cover.png"
-                  nom_auteur="nom de l'auteur"
-                  auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/00.png"
-                />
-                <Carte_pour_livre
-                  auteur_img_src="/cover.png"
-                  nom_auteur="nom de l'auteur"
-                  auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/00.png"
-                />
-                <Carte_pour_livre
-                  auteur_img_src="/cover.png"
-                  nom_auteur="nom de l'auteur"
-                  auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/00.png"
-                />
-                <Carte_pour_livre
-                  auteur_img_src="/cover.png"
-                  nom_auteur="nom de l'auteur"
-                  auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/00.png"
-                />
-                <Carte_pour_livre
-                  auteur_img_src="/cover.png"
-                  nom_auteur="nom de l'auteur"
-                  auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/00.png"
-                />
-                <Carte_pour_livre
-                  auteur_img_src="/cover.png"
-                  nom_auteur="nom de l'auteur"
-                  auteur_alt="livre d'un putin d'auteur congolais"
-                  livre_img_src="/00.png"
-                />
+                {livres?.livres?.slice(0, 4)?.map((item, index) => (
+                  <Carte_pour_livre
+                    key={index}
+                    nom_auteur={item.auteur}
+                    auteur_img_src="/icons/ecrivain.png"
+                    livre_img_src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -102,13 +74,14 @@ export default function Home({ livres }) {
               Un livre, une inspiration ...
             </div>
             <br />
-            {Object.entries(livres).map((x) => console.log(x))}
-            <Carte_pour_livre
-              auteur_img_src="/cover.png"
-              // nom_auteur={x.titre}
-              livre_img_src="/00.png"
-            />
-            ;
+            {livres?.livres?.slice(0, 6)?.map((item, index) => (
+              <Carte_pour_livre
+                key={index}
+                nom_auteur={item.auteur}
+                auteur_img_src="/icons/ecrivain.png"
+                livre_img_src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
+              />
+            ))}
           </div>
           <a href="" className={styles.proposal_action}>
             Voir toutes nos collections →
@@ -129,6 +102,7 @@ export const getStaticProps = async () => {
   );
 
   const livres = await res.json();
+  console.log("livres all", livres);
 
   return {
     props: {
