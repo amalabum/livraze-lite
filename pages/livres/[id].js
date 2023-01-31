@@ -74,40 +74,20 @@ export default function detai_livre({ livre, livres }) {
                     alt=""
                   /> */}
 
-            
-                <div className="titre_section mt-5">
-                  <h3>
-                    {" "}
-                    Collection <span> congolaise</span>{" "}
-                  </h3>
-                  Tous nos livres sont en dur...
-                </div>
-                <div className="cards_container">
-                  {livres?.livres?.slice(3, 9)?.map((item, index) => (
-                    <Carte_pour_livre
-                      key={index}
-                      nom_auteur={item.auteur}
-                      auteur_img_src="/icons/ecrivain.png"
-                      titre_l={item.titre.substr(0, 19)}
-                      // livre_img_src="/top_5/zigler.jpeg"
-                      livre_img_src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
-                    />
-                  ))}
-                </div>
-                <div className={styles.call_to_action}>
-                  <Link href="collection-congolaise">
-                    <span className="action_on_link">
-                      Voir toutes les collections →
-                    </span>
-                  </Link>
-                </div>
-                {/* <Link href="collection-congolaise" className={styles.proposal_action}>
+              <div className="titre_section mt-5">
+                <h3>
+                  {" "}
+                  Collection <span> congolaise</span>{" "}
+                </h3>
+                Tous nos livres sont en dur...
+              </div>
+
+              {/* <Link href="collection-congolaise" className={styles.proposal_action}>
             Voir toutes nos collections →
           </Link> */}
-                <br />
-                <br />
-              </div>
-  
+              <br />
+              <br />
+            </div>
           </div>
 
           <div className="section_deux">
