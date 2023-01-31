@@ -144,7 +144,7 @@ export default function Home({ livres }) {
             </h3>
             Tous nos livres sont en dur...
           </div>
-          <div className="cards_container">
+          <div className="cards_container d-none">
             {livres?.livres?.slice(3, 9)?.map((item, index) => (
               <Carte_pour_livre
                 key={index}
