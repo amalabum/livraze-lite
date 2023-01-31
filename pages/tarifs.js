@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 import Carte_pour_livre from "@/components/collection_congolaise";
 import { post } from "jquery";
 
-export default function Home({ livres }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -48,9 +48,9 @@ export default function Home({ livres }) {
                 </p>
               </div>
               <span className={styles.price}>4.6$/mois</span>
-              <a href="s-abonner">
+              <Link href="s-abonner">
                 <button className={styles.btn_1}>S'abonner</button>
-              </a>
+              </Link>
             </div>
             <div className={`${styles["element"]} ${styles["prix_2"]}`}>
               {" "}
@@ -98,17 +98,3 @@ export default function Home({ livres }) {
     </>
   );
 }
-
-export const getStaticProps = async () => {
-  const res = await fetch(
-    "http://localhost/fidbagraphicsApi-v1-0/?key=98986Z_HCC8765&datas=livres"
-  );
-
-  const livres = await res.json();
-
-  return {
-    props: {
-      livres,
-    },
-  };
-};
