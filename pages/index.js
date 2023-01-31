@@ -58,7 +58,7 @@ export default function Home({ livres }) {
                   auteur_img_src="/icons/ecrivain.png"
                   titre_l={item.titre.substr(0, 19)}
                   // livre_img_src="/top_5/zigler.jpeg"
-                  livre_img_src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
+                  livre_img_src={`http://bibliotheque-api.ritach.net/covers/${item.couverture}`}
                 />
               ))}
             </div>
@@ -152,7 +152,7 @@ export default function Home({ livres }) {
                 auteur_img_src="/icons/ecrivain.png"
                 titre_l={item.titre.substr(0, 19)}
                 // livre_img_src="/top_5/zigler.jpeg"
-                livre_img_src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
+                livre_img_src={`http://bibliotheque-api.ritach.net/covers/${item.couverture}`}
               />
             ))}
           </div>
