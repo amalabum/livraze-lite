@@ -9,8 +9,9 @@ import styles from "@/styles/Home.module.css";
 import Item_top_5 from "@/components/compsants_standards";
 import List_items from "@/components/List_items";
 import Nav_bar from "../components/navbar";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function partenariat() {
   return (
@@ -22,7 +23,7 @@ export default function partenariat() {
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
       <main className={styles.main}>
-        <Nav_bar />
+        <Navbar />
         <Other_banner
           title="Partenariat"
           subtitle="Bienvenue sur notre portail de partenariat"
@@ -55,12 +56,15 @@ export default function partenariat() {
           </ul>
           <div>
             Voici comment vous pouvez nous aider :
-            <a href=""> Faites un Don à notre bibliothèque →</a>
+            <Link href="">Faites un Don à notre bibliothèque </Link>
           </div>
-          <br />
-          <a className="Voir_toutes_nos_collections" href="">
-            En savoir plus sur la soirée littéraire →
-          </a>
+          <div className="call_to_action">
+            <Link href="presentationSoireeLitteraire">
+              <span className="action_on_link">
+                Pourquoi nous organisons des soirées littéraires ? →
+              </span>
+            </Link>
+          </div>
         </div>
 
         <Footer> </Footer>

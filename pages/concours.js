@@ -11,7 +11,7 @@ import List_items from "@/components/List_items";
 import Link from "next/link";
 import Nav_bar from "../components/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function concours() {
   return (
@@ -23,7 +23,7 @@ export default function concours() {
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
       <main className={styles.main}>
-        <Nav_bar />
+        <Navbar />
         <Other_banner
           title="Concours"
           subtitle="Nous somme la bibliothèque la plus moderne dans la ville"

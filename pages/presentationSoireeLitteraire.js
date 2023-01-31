@@ -9,8 +9,9 @@ import styles from "@/styles/Home.module.css";
 import Item_top_5 from "@/components/compsants_standards";
 import List_items from "@/components/List_items";
 import Nav_bar from "../components/navbar";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function partenariat() {
   return (
@@ -22,11 +23,10 @@ export default function partenariat() {
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
       <main className={styles.main}>
-        <Nav_bar />
+        <Navbar />
         <Other_banner
           title="Soirée littéraire"
           subtitle="des soirées qui reunissenr des esprits"
-          action="procahaine soirée"
         ></Other_banner>
         <div className={styles.default_div}>
           <img src="/en.png" className={styles.justifyed_img} />
@@ -88,9 +88,11 @@ export default function partenariat() {
               parler du cinéma congolais.
             </li>
           </ul>
-          <br />{" "}
-          <div className={styles.call_to_action_n}>
-            <a href=""> Voir la prochaine soirée → </a>
+
+          <div className="call_to_action">
+            <Link href="">
+              <span className="action_on_link">Participer à la soirée →</span>
+            </Link>
           </div>
         </div>
 

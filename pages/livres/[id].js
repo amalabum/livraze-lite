@@ -1,17 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
-import Copyright from "../components/copyright";
-import Footer from "../components/footer";
-import Navbar from "../components/header";
+import Copyright from "@/components/copyright";
+import Footer from "@/components/footer";
+import Carousel from "react-bootstrap/Carousel";
 import Other_banner from "@/components/other_banner";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Carte_pour_livre from "@/components/collection_congolaise";
-import Nav_bar from "../components/navbar";
+import Navbar from "@/components/header";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
-export default function partenariat() {
+export default function detai_livre({ livre, livres }) {
+  console.log("livre.synthese s", livre);
   return (
     <>
       <Head>
@@ -21,18 +24,133 @@ export default function partenariat() {
         <link rel="icon" href="/logo-livraze.png" />
       </Head>
       <main className={styles.main}>
-        <Nav_bar />
+        <Navbar />
         <Other_banner
-          title_n="JUSQU’AU COU : ENQUÊTE SUR LA DETTE DU TIERS MONDE"
-          subtitle="Collections / congolaise"
-          action="Profitez de l'offre"
+          title_n={livre.titre}
+          subtitle={`Oeuvre de ${livre.auteur}`}
         />
-        <div className={styles.collections_n}>
+        <div className="collections_list">
+          <div className="section_une">
+            <div className="livre_details">
+              <div className="img_livre">
+                <Image
+                  src="/00.png"
+                  className="image_c"
+                  alt=""
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <div className="text_livre">
+                <h6> </h6>
+                {livre.synthese}
+                <div className={styles.Carte_pour_livre_footer_n}>
+                  <Link
+                    href="../s-abonner"
+                    className={styles.Carte_pour_livre_a}
+                  >
+                    Profiter de l'offre
+                  </Link>
+                  <Link
+                    href={`https://wa.me/+243974242040?text=Bonjour livraze, je suis  interressé(s) par le livre :${livre.titre}, Est-il disponible pour une lecture? `}
+                    className={styles.whatsapp}
+                  >
+                    <img src="/icons/ic_lov.png" alt="" />
+                    <span> je veux lire ce livre </span>
+                  </Link>
+                  <a href="" className={styles.whatsapp}></a>
+                </div>
+              </div>
+              {/* <Image
+                    src="/00.png"
+                    className="image_c"
+                    alt=""
+                    layout="fill"
+                    objectFit="contain"
+                  /> */}
+              {/* <img
+                    className="couverture_img"
+                    src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
+                    alt=""
+                  /> */}
+
+            
+                <div className="titre_section mt-5">
+                  <h3>
+                    {" "}
+                    Collection <span> congolaise</span>{" "}
+                  </h3>
+                  Tous nos livres sont en dur...
+                </div>
+                <div className="cards_container">
+                  {livres?.livres?.slice(3, 9)?.map((item, index) => (
+                    <Carte_pour_livre
+                      key={index}
+                      nom_auteur={item.auteur}
+                      auteur_img_src="/icons/ecrivain.png"
+                      titre_l={item.titre.substr(0, 19)}
+                      // livre_img_src="/top_5/zigler.jpeg"
+                      livre_img_src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
+                    />
+                  ))}
+                </div>
+                <div className={styles.call_to_action}>
+                  <Link href="collection-congolaise">
+                    <span className="action_on_link">
+                      Voir toutes les collections →
+                    </span>
+                  </Link>
+                </div>
+                {/* <Link href="collection-congolaise" className={styles.proposal_action}>
+            Voir toutes nos collections →
+          </Link> */}
+                <br />
+                <br />
+              </div>
+  
+          </div>
+
+          <div className="section_deux">
+            <div className="carousel_collections">
+              <Carousel variant="dark" indicators={false}>
+                {livres?.livres?.map((item, index) => (
+                  <Carousel.Item>
+                    {/* <img
+                      className="caroussels_img "
+                      src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
+                      alt="First slide"
+                    /> */}
+                    <Image
+                      src="/00.png"
+                      className="caroussels_img"
+                      alt="Picture of the author"
+                      width={180}
+                      height={200}
+                      priority
+                    />
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+            </div>
+            <div className="categories">
+              <h3> Categories </h3>
+              <ul>
+                <li>Droit</li>
+                <li> Economie</li>
+                <li> Sociologie</li>
+                <li> Technologie</li>
+                <li> categorie 1</li>
+                <li> categorie 1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* <div className={styles.collections_n}>
           <div className={styles.collections_n_section1}>
             <div className={styles.livre_n_details}>
               <div className={styles.livre_n_img_n}>
                 <img
-                  src="/top_5/zigler.jpeg"
+                  src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${livre.couverture}`}
                   className={styles.livre_x_img}
                   alt=""
                 />
@@ -42,37 +160,19 @@ export default function partenariat() {
                 <div className={styles.Carte_pour_livre_header}>
                   <div className={styles.Carte_pour_livre_section1}>
                     <img src="/icons/auteur_ic.png" alt="" />
-                    Auteur : Nom de l'auteur
+                    Auteur : {livre.auteur}
                     <h4>#droit, #Sociologie </h4>
                   </div>
                 </div>
-                Le jury procédera ensuite aux questions-réponses en partageant
-                avec chaque groupe un chapitre du livre dont sera tiré le
-                questionnaire. Tous les membres du groupe sont autorisés à
-                participer à la séance de questions-réponses qui aura lieu dans
-                les salons VIP 2 de l'agence de communication FIDBA GRAPHICS
-                devant quelques invités et partenaires. NB : La présentation
-                représente 40% des points du concours. Ces points sont répartis
-                équitablement entre les membres de l'équipe. A ce niveau.
-                l'étudiant qui n'aura pas lu le travail ou qui sera absent sans
-                raison valable lors de la séance de questions-réponses sera
-                automatiquement éliminé. A l'issue de cette session, la liste
-                des candidats sélectionnés pour la deuxième phase d'élimination
-                sera publiée sur les plateformes de communication de Livraze et
-                de ses partenaires. Les points récoltés lors de la première
-                phase d'élimination seront ajoutés à ceux de la deuxième phase
-                d'élimination pour déterminer le % d’étudiants qui seront
-                sectionnés. Seuls 25 élèves passeront à l'étape suivante du
-                concours et la liste sera publiée après 24 heures de l'étape 3
-                du concours.
+                {livre.synthese}
                 <br />
                 <br />
               </div>
             </div>
             <div className={styles.Carte_pour_livre_footer_n}>
-              <a href="" className={styles.Carte_pour_livre_a}>
+              <Link href="" className={styles.Carte_pour_livre_a}>
                 Profiter de l'offre
-              </a>
+              </Link>
               <a href="" className={styles.whatsapp}>
                 <img src="/icons/ic_lov.png" alt="" />
                 <span> je veux lire ce livre </span>
@@ -80,7 +180,7 @@ export default function partenariat() {
               <a href="" className={styles.whatsapp}></a>
             </div>
           </div>
-          <div className={styles.collections_n_section2}>
+           <div className={styles.collections_n_section2}>
             <h4>Toutes les categories </h4>
             <ul href="" className={styles.liste_des_categorie}>
               <a>
@@ -105,40 +205,10 @@ export default function partenariat() {
             <img src="/00.png" alt="" />
           </div>
         </div>
-        <div className={styles.default_div_fo_libs_container}>
-          <div className={styles.default_div_fo_libs}>
-            <div className={styles.top_cinq_titre}>
-              <h2> Voir aussi</h2>
-              Tous nos nos livres sont en dur ...
-            </div>
-            <br />
-            <Carte_pour_livre
-              auteur_img_src="/icons/auteur_ic.png"
-              livraze_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/00.png"
-            />
-            <Carte_pour_livre
-              auteur_img_src="/icons/auteur_ic.png"
-              livraze_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/00.png"
-            />
-            <Carte_pour_livre
-              auteur_img_src="/icons/auteur_ic.png"
-              livraze_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/00.png"
-            />
-            <Carte_pour_livre
-              auteur_img_src="/icons/auteur_ic.png"
-              livraze_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/00.png"
-            />
-            <Carte_pour_livre
-              auteur_img_src="/icons/auteur_ic.png"
-              livraze_alt="livre d'un putin d'auteur congolais"
-              livre_img_src="/00.png"
-            />
-          </div>
-        </div>
+        <div className="call_to_action"></div>
+        <div className={styles.default_div}>
+       
+        </div> */}
         <Footer />
         <Copyright />
       </main>
@@ -146,17 +216,25 @@ export default function partenariat() {
   );
 }
 
-export async function getServerSideProps({ params }) {
+export const getServerSideProps = async ({ params }) => {
+  const router = params;
+  const { id } = router;
+
   const res = await fetch(
-    `http://localhost/fidbagraphicsApi-v1-0/?key=98986Z_HCC8765&livre=${params.id}`
+    `http://localhost/fidbagraphicsApi-v1-0/?key=98986Z_HCC8765&livre=${id}`
+  );
+  const resb = await fetch(
+    "http://localhost/fidbagraphicsApi-v1-0/?key=98986Z_HCC8765&datas=livres"
   );
 
   const livre = await res.json();
-  console.log(livre);
+  const livres = await resb.json();
+  console.log("livre  det", livre);
 
   return {
     props: {
       livre,
+      livres,
     },
   };
-}
+};

@@ -6,13 +6,13 @@ import styles from "@/styles/Home.module.css";
 
 function Nav_bar() {
   return (
-    <div className={styles.standard_header}>
-      <div className={styles.logo_img}>
+    <div className="Main_header">
+      <div className="logo">
         <a href="/">
           <img src="/logo-livraze.png" alt="logo livraze" />
         </a>
       </div>
-      <div className={styles.menu_principal}>
+      <div className="menu_principal">
         <Navbar expand="lg" className={styles.menu_nd}>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -45,8 +45,8 @@ function Nav_bar() {
         </Navbar>
       </div>
       <div className={styles.recherche_bar}>
-        <img src="/search_ic.png" alt="barre de recherche" />
-        {/* <button className={styles.subscribe}> Essayer livraze ! </button> */}
+        {/* <img src="/search_ic.png" alt="barre de recherche" /> */}
+        <button className={styles.subscribe}> s'abonner ! </button>
       </div>
     </div>
   );

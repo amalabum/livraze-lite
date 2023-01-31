@@ -3,10 +3,10 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.section1}>
-        « la mission de livraze est d'encourager les jeunes de la ville de goma,
+        {/* « la mission de livraze est d'encourager les jeunes de la ville de goma,
         les touristes ou les visiteurs qui y séjournent à découvrir les livres
         de manière organisée.» <br />
-        <br />
+        <br /> */}
         <div className={styles.mysocial_medias}>
           <ul>
             <li>

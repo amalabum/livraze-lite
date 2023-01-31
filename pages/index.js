@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import Nav_bar from "../components/navbar";
+// import Nav_bar from "../components/navbar";
 import Copyright from "../components/copyright";
 import Footer from "../components/footer";
-import Navbar from "../components/header";
-import Main_banner from "@/components/main_banner";
+import Nav_bar from "../components/header";
+import Homebaner from "@/components/home-baner";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Item_top_5 from "@/components/compsants_standards";
@@ -12,7 +12,7 @@ import List_items from "@/components/List_items";
 import { useState, useEffect } from "react";
 import Carte_pour_livre from "@/components/collection_congolaise";
 import { post } from "jquery";
-
+import Link from "next/link";
 export default function Home({ livres }) {
   return (
     <>
@@ -25,7 +25,7 @@ export default function Home({ livres }) {
       <Nav_bar />
 
       <main className={styles.main}>
-        <div className={styles.call_to_action_don_livre}>
+        <div className="call_to_action_don_livre">
           <div className={styles.proposal}>
             <h1> « Puis-je Exposer Mes livres à la bibliothèque ? » </h1> <br />
             <span className="response_quest">
@@ -34,58 +34,138 @@ export default function Home({ livres }) {
             <br />
             <br />
             <br />
-            <a href="" className={styles.proposal_action}>
+            <a href="/collection-congolaise" className={styles.proposal_action}>
               lancer le processus →
             </a>
           </div>
         </div>
 
         <div className={styles.app_container}>
-          <Main_banner></Main_banner>
-          <div className={styles.top_cinq_titre}>
-            <h2> La collection la plus consultée</h2>
-            Tous nos livres sont en dur ...
+          <Homebaner />
+          <div className="top_cinq_titre">
+            <h3>
+              {" "}
+              5 livres à <span> la une</span>{" "}
+            </h3>
+            Tous nos livres sont en dur...
           </div>
           <div className={styles.relative_bloc}>
-            <div className={styles.top_cinq_img}>
-              <img src="/hero2.jpg" alt="barre de recherche" />{" "}
-            </div>
-            <div className={styles.top_cinq_list}>
-              <div className={styles.top_cinq_list_livre}>
-                {livres?.livres?.slice(0, 4)?.map((item, index) => (
-                  <Carte_pour_livre
-                    key={index}
-                    nom_auteur={item.auteur}
-                    auteur_img_src="/icons/ecrivain.png"
-                    livre_img_src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
-                  />
-                ))}
-              </div>
+            <div className="cards_container">
+              {livres?.livres?.slice(0, 5)?.map((item, index) => (
+                <Carte_pour_livre
+                  key={index}
+                  nom_auteur={item.auteur}
+                  auteur_img_src="/icons/ecrivain.png"
+                  titre_l={item.titre.substr(0, 19)}
+                  // livre_img_src="/top_5/zigler.jpeg"
+                  livre_img_src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
+                />
+              ))}
             </div>
           </div>
           <div className={styles.call_to_action}>
-            <a href=""> Voir toutes nos collections →</a>
+            <Link href="collection-congolaise">
+              <span className="action_on_link">
+                Voir toutes les collections →
+              </span>
+            </Link>
+          </div>
+
+          <div className="intro_soiree_container">
+            <div className="section_img"></div>
+            <div className="section_text">
+              <div className="DATE">
+                <div className="jour">
+                  18
+                  <div className="mois">janvier</div>{" "}
+                </div>{" "}
+              </div>
+              <h2>
+                Soirée <span className="text_coloric">Littéraire</span>
+                <span className="dot">.</span>
+              </h2>
+              <h5>
+                Sous le Thème <b>Safari !</b>
+              </h5>
+              Afin de promouvoir la littérature locale et nationale, Livraze
+              s'est donné pour mission d'organiser des cercles littéraires
+              autour des livres des auteurs congolais de la diaspora ou vivant
+              au pays. Les soirées de Livraze sont festives et elles réunissent
+              des auteurs nationaux devant un public d'étudiants,
+              d'entrepreneurs, d'avocats, de médecins, d'enseignants, de
+              commerçants... <br />
+              <div className="call_to_action">
+                <Link href="">
+                  <span className="action_on_link">
+                    Participer à la soirée →
+                  </span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
-        <div className={styles.our_collection}>
-          <div className={styles.default_div_fo_libs}>
-            <div className={styles.section_title}>
-              <h2> La collection la plus consultée</h2>
-              Un livre, une inspiration ...
+        {/* <div className="team d-none">
+          <div className="titre">Team</div>
+          <div className="member_cards">
+            <div className="member">
+              <img className="member_img" src="/team/a.jpg" />
+
+              <div className="team_medias">
+                <Link href="https://twitter.com/livrazee">
+                  <img
+                    className="ic_img"
+                    src="/icons/facebook-circular-logo.png"
+                    alt=""
+                  />
+                </Link>
+
+                <Link href="https://twitter.com/livrazee">
+                  <img className="ic_img" src="/icons/twitter.png" alt="" />
+                </Link>
+
+                <Link href="https://twitter.com/livrazee">
+                  <img className="ic_img" src="/icons/instagram.png" alt="" />
+                </Link>
+              </div>
             </div>
-            <br />
-            {livres?.livres?.slice(0, 6)?.map((item, index) => (
+            <div className="member">
+              <img className="member_img" src="/team/2.jpg" />
+            </div>
+            <div className="member">
+              <img className="member_img" src="/team/3.jpg" />
+            </div>
+          </div>
+        </div> */}
+        <div className={styles.our_collection}>
+          <div className="titre_section mt-5">
+            <h3>
+              {" "}
+              Collection <span> congolaise</span>{" "}
+            </h3>
+            Tous nos livres sont en dur...
+          </div>
+          <div className="cards_container">
+            {livres?.livres?.slice(3, 9)?.map((item, index) => (
               <Carte_pour_livre
                 key={index}
                 nom_auteur={item.auteur}
                 auteur_img_src="/icons/ecrivain.png"
+                titre_l={item.titre.substr(0, 19)}
+                // livre_img_src="/top_5/zigler.jpeg"
                 livre_img_src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
               />
             ))}
           </div>
-          <a href="" className={styles.proposal_action}>
+          <div className={styles.call_to_action}>
+            <Link href="collection-congolaise">
+              <span className="action_on_link">
+                Voir toutes les collections →
+              </span>
+            </Link>
+          </div>
+          {/* <Link href="collection-congolaise" className={styles.proposal_action}>
             Voir toutes nos collections →
-          </a>
+          </Link> */}
           <br />
           <br />
         </div>
@@ -102,7 +182,7 @@ export const getStaticProps = async () => {
   );
 
   const livres = await res.json();
-  console.log("livres all", livres);
+  // console.log("livres all", livres);
 
   return {
     props: {
