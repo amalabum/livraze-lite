@@ -12,6 +12,7 @@ import List_items from "@/components/List_items";
 import { useState, useEffect } from "react";
 import Carte_pour_livre from "@/components/collection_congolaise";
 import { post } from "jquery";
+import Link from "next/link";
 
 export default function Home() {
   return (
