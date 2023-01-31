@@ -69,9 +69,9 @@ export default function Home() {
                 </p>
               </div>
               <span className={styles.price}>11,99$/mois</span>
-              <a href="s-abonner">
+              <Link href="s-abonner">
                 <button className={styles.btn_2}>S'abonner</button>
-              </a>
+              </Link>
             </div>
             <div className={`${styles["element"]} ${styles["prix_3"]}`}>
               {/* prix_3 */}
@@ -86,9 +86,9 @@ export default function Home() {
                 </p>
               </div>
               <span className={styles.price}>9.99$/mois</span>
-              <a href="s-abonner">
+              <Link href="s-abonner">
                 <button className={styles.btn_3}>S'abonner</button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
