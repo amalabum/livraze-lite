@@ -176,9 +176,9 @@ export default function Home({ livres }) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(
-    "http://localhost/fidbagraphicsApi-v1-0/?key=98986Z_HCC8765&datas=livres"
+    "http://bibliotheque-api.ritach.net/?key=98986Z_HCC8765&datas=livres"
   );
 
   const livres = await res.json();

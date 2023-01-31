@@ -201,10 +201,10 @@ export const getServerSideProps = async ({ params }) => {
   const { id } = router;
 
   const res = await fetch(
-    `http://localhost/fidbagraphicsApi-v1-0/?key=98986Z_HCC8765&livre=${id}`
+    `http://bibliotheque-api.ritach.net/?key=98986Z_HCC8765&livre=${id}`
   );
   const resb = await fetch(
-    "http://localhost/fidbagraphicsApi-v1-0/?key=98986Z_HCC8765&datas=livres"
+    "http://bibliotheque-api.ritach.net/?key=98986Z_HCC8765&datas=livres"
   );
 
   const livre = await res.json();

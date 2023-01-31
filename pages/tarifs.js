@@ -29,7 +29,6 @@ export default function Home() {
         <Other_banner
           title="Profitez de l'abonnement !"
           subtitle="AFIN D'ACCÉDER À NOS COLLECTIONS"
-          action=""
         ></Other_banner>
         <div className={styles.pricingtable}>
           <div className={styles.container}>
