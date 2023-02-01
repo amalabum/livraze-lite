@@ -5,59 +5,124 @@
     justify-content: center;
     width: 70%;
   }
+
   position: relative;
   width: 75%;
   margin: auto;
-  @media (min-width: 0) and (max-width: 403px) {
-    width: 90%;
-    margin-left: 8%;
-  }
+  // @media (min-width: 1200px) {
+  //   width: 85%;
+  // }
+  //   @media (min-width: 0) and (max-width: 403px) {
+  //     width: 90%;
+  //     margin-left: 8%;
+  //   }
 }
 .Card_livre {
   padding-left: 10px;
-  margin-top: 10px;
+  margin-top: 6px;
   width: 150px;
+  // @media (max-width: 1200px) {
+  //   width: 190px;
+  // }
+  // @media (min-width: 0) and (max-width: 674px) {
+  //   display: inline-block !important;
+  //   min-height: 140px;
+  // }
+  // .card_legende {
+  //   width: 100%;
+  //   text-align: left;
+  //   font-size: 14px;
+  //   font-weight: bold;
+  //   padding-top: 5px;
 
-  @media (min-width: 0) and (max-width: 674px) {
-    display: inline-block !important;
-    min-height: 140px;
-  }
-  .card_legende {
-    width: 100%;
-    text-align: center;
-    font-size: 13px;
-    padding-top: 10px;
-    font-weight: 400;
-    text-transform: uppercase;
-    position: relative;
-    min-height: 80px;
-    @media (min-width: 0) and (max-width: 674px) {
-      font-size: 16px;
-    }
-  }
+  //   text-transform: capitalize;
+  //   position: relative;
+  //   min-height: 80px;
+  //   @media (min-width: 0) and (max-width: 674px) {
+  //     font-size: 16px;
+  //   }
+  // }
 }
 // .image_c {
 //   width: 100%;
 // }
-.Card_livre_containt {
-  position: relative;
-  height: 200px;
-}
-.livre_details {
-  width: 100%;
-  height: 300px;
-  position: relative;
+// .Card_livre_containt {
+//   position: relative;
+//   height: 200px;
+// }
+// .livre_details {
+//   width: 100%;
+//   height: 300px;
+//   position: relative;
 
-  padding: 0.4em 0.4em;
-  .img_livre {
-    position: relative;
-    width: 200px;
-    float: left;
+//   padding: 0.4em 0.4em;
+//   .img_livre {
+//     position: relative;
+//     width: 200px;
+//     float: left;
+//   }
+//   .text_livre {
+//     position: relative;
+//     width: auto;
+//     float: left;
+//   }
+// }
+// @media (max-width: 1008px) {
+.cards_container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  @media (min-width: 587px) and (max-width: 996px) {
+    grid-template-columns: repeat(3, auto);
+    font-size: 11px;
   }
-  .text_livre {
-    position: relative;
-    width: auto;
-    float: left;
-    
+  @media (min-width: 996px) and (max-width: 1196px) {
+    grid-template-columns: repeat(4, auto);
+  }
+  @media (min-width: 1196px) and (max-width: 1296px) {
+    grid-template-columns: repeat(5, auto);
+  }
+  @media (min-width: 1296px) {
+    grid-template-columns: repeat(8, auto);
+  }
+  // flex-direction: column;
+
+  .Card_livre {
+    width: 100%;
+    display: inline-block;
+
+    // display: grid;
+    // grid-template-areas: "left-right";
+    // background-color: cyan;
+    .Card_livre_containt {
+      width: 150px;
+      grid-area: right;
+
+      img {
+        width: 100%;
+      }
+    }
+    .card_legende {
+      // grid-area: left;
+      width: 140px;
+      padding-left: 10px;
+      padding-right: -10px;
+      height: auto;
+      text-transform: lowercase;
+      font-weight: normal;
+      font-size: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 }
+@media (max-width: 379px) {
+  .Card_livre_containt {
+    width: 100px;
+  }
+}
+// @media (max-width: 339px) {
+//   .Card_livre_containt {
+//     width: 70px;
+//   }
+// }
+// }

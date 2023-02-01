@@ -27,16 +27,7 @@ export default function Home({ livres }) {
       <main className={styles.main}>
         <div className="call_to_action_don_livre">
           <div className={styles.proposal}>
-            <h1>
-              {" "}
-              « Vous pouvez nous enprumter ou vendre bous livres icious pouvez
-              nous enprumter ou vendre bous livres ici »{" "}
-            </h1>{" "}
-            <br />
-            <span className="response_quest">
-              tout le plaisir est pour nous..
-            </span>
-            <br />
+            <h1> « Vous pouvez nous enprumter ou vendre vos livres ici » </h1>{" "}
             <br />
             <br />
             <a href="/collection-congolaise" className={styles.proposal_action}>
@@ -48,31 +39,26 @@ export default function Home({ livres }) {
         <div className={styles.app_container}>
           <Homebaner />
           <div className="top_cinq_titre">
-            <h3>
-              {" "}
-              5 livres à <span> la une</span>{" "}
-            </h3>
+            <h3>Nos collections les plus aimées</h3>
             Tous nos livres sont en dur...
           </div>
           <div className={styles.relative_bloc}>
             <div className="cards_container">
-              {livres?.livres?.slice(0, 5)?.map((item, index) => (
+              {livres?.livres?.slice(0, 9)?.map((item, index) => (
                 <Carte_pour_livre
                   key={index}
                   nom_auteur={item.auteur}
                   auteur_img_src="/icons/ecrivain.png"
-                  titre_l={item.titre.substr(0, 19)}
-                  // livre_img_src="/top_5/zigler.jpeg"
+                  titre_l={item.titre}
                   livre_img_src={`http://bibliotheque-api.ritach.net/covers/${item.couverture}`}
+                  link={`livres/${item.id}`}
                 />
               ))}
             </div>
           </div>
           <div className={styles.call_to_action}>
             <Link href="collection-congolaise">
-              <span className="action_on_link">
-                Voir toutes les collections →
-              </span>
+              Voir toutes les collections →
             </Link>
           </div>
 
@@ -101,9 +87,7 @@ export default function Home({ livres }) {
               commerçants... <br />
               <div className="call_to_action">
                 <Link href="">
-                  <span className="action_on_link">
-                    Participer à la soirée →
-                  </span>
+                  <span className="">Participer à la soirée →</span>
                 </Link>
               </div>
             </div>
@@ -143,14 +127,11 @@ export default function Home({ livres }) {
         </div> */}
         <div className={styles.our_collection}>
           <div className="titre_section mt-5">
-            <h3>
-              {" "}
-              Collection <span> congolaise</span>{" "}
-            </h3>
+            <h3> Nos Collections</h3>
             Tous nos livres sont en dur...
           </div>
           <div className="cards_container ">
-            {livres?.livres?.slice(3, 9)?.map((item, index) => (
+            {livres?.livres?.slice(0, 5)?.map((item, index) => (
               <Carte_pour_livre
                 key={index}
                 nom_auteur={item.auteur}

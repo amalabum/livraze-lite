@@ -1,17 +1,20 @@
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
-// import { Link } from "next/link";
+import { Link } from "next/link";
 
 const Carte_pour_livre = (props) => {
   return (
     <div className="Card_livre">
       <div className="Card_livre_containt">
-        <img
-          className="image_c"
-          src={props.livre_img_src}
-          alt={props.livre_alt}
-          width="100%"
-        />
+        <Link href={`livres/${item.id}`} className={styles.Carte_pour_livre_a}>
+          {" "}
+          <img
+            className="image_c"
+            src={props.livre_img_src}
+            alt={props.livre_alt}
+            width="100%"
+          />{" "}
+        </Link>
         {/* <Image
           src={props.livre_img_src}
           className="image_c"
@@ -20,7 +23,9 @@ const Carte_pour_livre = (props) => {
           objectFit="contain"
         /> */}
       </div>
-      <h6 className="card_legende">{props.titre_l} ...</h6>
+      <h5 className="card_legende">
+        <i>{props.titre_l}</i>
+      </h5>
     </div>
   );
 

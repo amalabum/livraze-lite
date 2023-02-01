@@ -71,7 +71,7 @@ export default function livres({ livres }) {
                   </div>
                   <div className={styles.Carte_pour_livre_footer_n}>
                     <Link
-                      href={`livres/${item.id}`}
+                      href={props.link}
                       className={styles.Carte_pour_livre_a}
                     >
                       {" "}

@@ -75,7 +75,7 @@ export default function apropos() {
           lecture informative, une lecture sur papier. Et ce, afin que les
           jeunes restent concentrés sur l'essentiel, pour leur bien et celui de
           nos communautés.
-          <h3 className={styles.subtitle_n}>Mission</h3>
+          <h3 className={styles.subtitle_n}>Notre Histoire</h3>
           Livraze a été fondée au mois d’avril 2022, à l'initiative de Fidel
           BASHIGE, le PDG de Fidba Graphics. Cette idée de bibliothèque remonte
           à plusieurs années mais elle est devenue une réalité en décembre 2022

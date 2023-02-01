@@ -104,6 +104,26 @@
     transform: rotate(90deg);
   }
 }
+@-webkit-keyframes background_anim {
+  0% {
+    background-color: #106071;
+  }
+  10% {
+    background-color: #106071;
+  }
+  20% {
+    background-color: #106071;
+  }
+  30% {
+    background-color: #106071;
+  }
+  40% {
+    background-color: #106071;
+  }
+  50% {
+    background-color: #106071;
+  }
+}
 .call_to_action {
   margin-top: 40px;
 }
@@ -112,6 +132,13 @@
   text-decoration: none;
   border: 1px solid #00000f;
   padding: 6px 13px;
+  color: #0e0d0d;
+}
+.call_to_action a:hover {
+ 
+  background-color: #00000f;
+  border: none;
+  color: #f8f8f8;
 }
 .text_coloric {
   color: #106071;

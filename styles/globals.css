@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@100&display=swap");
 .home_baner::before {
   content: "";
   font-family: "shape divider from ShapeDividers.com";
@@ -95,7 +96,7 @@
 :root {
   /* --max-width: 1100px; */
   --border-radius: 12px;
-  --font-mono: "Quicksand", sans-serif;
+  --font-mono: "Poppins" sans-serif;
   --foreground-rgb: 1, 1, 1;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -209,6 +210,7 @@ a {
 .Main_header .recherche_bar {
   position: relative;
   width: 15%;
+  display: none;
   text-align: center;
 }
 .Main_header .recherche_bar .img {
@@ -217,9 +219,9 @@ a {
 }
 .Main_header .menu_principal {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   position: relative;
-  width: 70%;
+  width: 80%;
   margin-top: -16px;
   text-transform: capitalize;
 }
@@ -466,62 +468,66 @@ a {
     width: 70%;
   }
 }
-@media (min-width: 0) and (max-width: 403px) {
-  .cards_container {
-    width: 90%;
-    margin-left: 8%;
-  }
-}
 
 .Card_livre {
   padding-left: 10px;
-  margin-top: 10px;
+  margin-top: 6px;
   width: 150px;
 }
-@media (min-width: 0) and (max-width: 674px) {
-  .Card_livre {
-    display: inline-block !important;
-    min-height: 140px;
+
+.cards_container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+@media (min-width: 587px) and (max-width: 996px) {
+  .cards_container {
+    grid-template-columns: repeat(3, auto);
+    font-size: 11px;
   }
 }
-.Card_livre .card_legende {
+@media (min-width: 996px) and (max-width: 1196px) {
+  .cards_container {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+@media (min-width: 1196px) and (max-width: 1296px) {
+  .cards_container {
+    grid-template-columns: repeat(5, auto);
+  }
+}
+@media (min-width: 1296px) {
+  .cards_container {
+    grid-template-columns: repeat(8, auto);
+  }
+}
+.cards_container .Card_livre {
   width: 100%;
-  text-align: center;
-  font-size: 13px;
+  display: inline-block;
+}
+.cards_container .Card_livre .Card_livre_containt {
+  width: 150px;
+  grid-area: right;
+}
+.cards_container .Card_livre .Card_livre_containt img {
+  width: 100%;
+}
+.cards_container .Card_livre .card_legende {
+  width: 140px;
+  padding-left: 10px;
+  padding-right: -10px;
+  height: auto;
+  text-transform: lowercase;
+  font-weight: normal;
+  font-size: 15px;
   padding-top: 10px;
-  font-weight: 400;
-  text-transform: uppercase;
-  position: relative;
-  min-height: 80px;
+  padding-bottom: 10px;
 }
-@media (min-width: 0) and (max-width: 674px) {
-  .Card_livre .card_legende {
-    font-size: 16px;
+
+@media (max-width: 379px) {
+  .Card_livre_containt {
+    width: 100px;
   }
 }
-
-.Card_livre_containt {
-  position: relative;
-  height: 200px;
-}
-
-.livre_details {
-  width: 100%;
-  height: 300px;
-  position: relative;
-  padding: 0.4em 0.4em;
-}
-.livre_details .img_livre {
-  position: relative;
-  width: 200px;
-  float: left;
-}
-.livre_details .text_livre {
-  position: relative;
-  width: auto;
-  float: left;
-}
-
 .action_on_link {
   font-size: 15px;
   color: #00000f;
@@ -636,6 +642,26 @@ a {
   transform: rotate(90deg);
 }
 
+@-webkit-keyframes background_anim {
+  0% {
+    background-color: #106071;
+  }
+  10% {
+    background-color: #106071;
+  }
+  20% {
+    background-color: #106071;
+  }
+  30% {
+    background-color: #106071;
+  }
+  40% {
+    background-color: #106071;
+  }
+  50% {
+    background-color: #106071;
+  }
+}
 .call_to_action {
   margin-top: 40px;
 }
@@ -645,6 +671,13 @@ a {
   text-decoration: none;
   border: 1px solid #00000f;
   padding: 6px 13px;
+  color: #0e0d0d;
+}
+
+.call_to_action a:hover {
+  background-color: #00000f;
+  border: none;
+  color: #f8f8f8;
 }
 
 .text_coloric {
