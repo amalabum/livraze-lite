@@ -27,7 +27,12 @@ export default function Home({ livres }) {
       <main className={styles.main}>
         <div className="call_to_action_don_livre">
           <div className={styles.proposal}>
-            <h1> « Puis-je Exposer Mes livres à la bibliothèque ? » </h1> <br />
+            <h1>
+              {" "}
+              « Vous pouvez nous enprumter ou vendre bous livres icious pouvez
+              nous enprumter ou vendre bous livres ici »{" "}
+            </h1>{" "}
+            <br />
             <span className="response_quest">
               tout le plaisir est pour nous..
             </span>
