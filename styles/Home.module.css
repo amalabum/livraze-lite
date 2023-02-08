@@ -18,7 +18,7 @@
   font-family: var(--font-mono);
   /* min-height: 100vh;*/
   background-color: #ffffff;
-  margin-bottom: 340px;
+  margin-bottom: 230px;
   border-radius: 0 0 30px 30px;
   overflow: hidden;
 }
@@ -69,7 +69,7 @@
     padding-top: 20px;
   }
   .cover_bloc {
-    display: none;
+    height: 200px;
   }
 
   .menu_nd {
@@ -123,7 +123,7 @@
   height: 100%;
   text-align: center;
   color: #ffffff;
-  background-color: #051418bc;
+  background-color: #072831da;
 }
 
 .cover_bloc,
@@ -311,7 +311,7 @@
   display: inline-block;
   border: none;
 
-  width: 46px;
+  width: 32px;
 }
 .mysocial_medias ul li a {
   border: none;
@@ -320,7 +320,7 @@
   border: none;
 }
 .mysocial_medias img {
-  width: 30px;
+  width: 22px;
 }
 
 .top_cinq_img {
@@ -376,10 +376,10 @@
 .call_to_action a:hover {
   background-color: #00000f;
   border: none;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .call_to_action_don_livre {
-  min-height: 500px;
+  min-height: 300px;
   background-image: url("/our_lib.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -400,34 +400,34 @@
   height: 100%;
   width: 100%;
   color: #ffffff;
-  background-color: rgba(7, 9, 10, 0.763);
+  background-color: rgba(24, 75, 100, 0.891);
   text-align: center;
   padding-top: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-bottom: 70px;
 }
 .proposal_action {
   border-radius: 60px;
   /* border: 1px solid #9c9595; */
-  padding: 9px 20px;
+  padding: 9px 50px;
   font-size: 18px;
-  background-color: #1b1b1b;
-  transition: 0.3s;
+  background-color: #c04a4a;
+  transition: 0.1s;
   margin-bottom: 20px;
   text-decoration: none;
-  color: #ffffff;
+  color: #ffffff !important;
+  font-size: 14px;
 }
 .proposal_action:hover {
   border-radius: 60px;
   border: none;
   padding: 10px 20px;
   background-color: #893232;
-  padding: 14px 35px;
-  transition: 0.3s;
-  font-weight: bold;
-  font-size: 19px;
-  color: #ffffff;
+  padding: 10px 35px;
+  transition: 0.1s;
+  font-size: 17px;
+  color: #ffffff !important;
 }
 .our_collection {
   display: flex;
@@ -436,8 +436,8 @@
   align-items: center;
   position: relative;
   min-height: 460px;
-
   width: 100%;
+  border-radius: 23px 23px 0 0;
 }
 .collections {
   position: relative;
@@ -498,28 +498,17 @@
   padding-left: 0px;
   display: flex;
 }
-.subscribe {
-  font-size: 14px;
-  margin-top: 15px;
-  outline: none;
-  width: 200px;
-  border-radius: 0px;
 
-  padding: 6px 8px;
-  background-color: inherit;
-  /* color: #000000; */
-  border: 1px solid #0f0909;
-  /* border: none; */
-  border-radius: 20px;
-}
 .Carte_pour_livre_footer_n a {
   width: auto;
   text-align: justify;
   text-decoration: none;
   margin-right: 20px;
+  font-size: 12px;
+  /* color: #f9f9f9 !important; */
 }
-.Carte_pour_livre_footer_n a:hover {
-}
+/* .Carte_pour_livre_footer_n a:hover {
+} */
 .whatsapp span {
   position: absolute;
   top: 2px;
@@ -527,6 +516,8 @@
 .whatsapp {
   width: 200px;
 }
+/* .action_color {
+} */
 .whatsapp img {
   margin-right: 10px;
 }
@@ -611,7 +602,7 @@
   position: relative;
   height: auto;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
 
   justify-content: center;
   padding-top: 90px;
@@ -620,10 +611,12 @@
   margin-bottom: 0w;
   padding-bottom: 30px;
   background-color: #ffffff;
-  /* background-color: #fed8d8; */
 }
 .section1 {
-  width: 40%;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
 }
 
 .section1 a {
@@ -634,19 +627,33 @@
   text-decoration: none;
 }
 .section2 {
-  width: 40%;
-  padding-left: 10%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  color: #26555f;
+  font-size: 15px;
+}
+@media (min-width: 978px) {
+  .section1 {
+    padding-left: 12%;
+    justify-content: start;
+  }
+  .section2 {
+    justify-content: end;
+    padding-right: 12%;
+  }
 }
 .copyright {
   width: 100%;
   position: relative;
-  background-color: #292828;
+  background-color: #106071;
 
   z-index: 12;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
-  color: #6f6767;
+  color: #bab4b4;
+  font-size: 13px;
 }
 .default_div {
   width: 69%;
@@ -691,12 +698,23 @@
     -webkit-animation: bounce-in-top 1.1s both;
     animation: bounce-in-top 1.1s both;
   }
+  .cover_bloc_title_n {
+    font-size: 26px;
+  }
 }
 @media (min-width: 854px) {
   .default_div {
     width: 66%;
     font-size: 17px;
     text-align: justify;
+  }
+}
+@media (max-width: 854px) {
+  .cover_bloc_title {
+    font-size: 23px !important;
+  }
+  .cover_bloc_title_n {
+    font-size: 22px;
   }
 }
 .subtitle_n_sr {
@@ -729,9 +747,6 @@
   margin-bottom: 30px;
 }
 
-.cover_bloc_title_n {
-  font-size: 26px;
-}
 .livre_n_details {
   width: 100%;
   display: flex;
@@ -764,7 +779,7 @@
     height: 160px !important;
   }
   .Carte_pour_livre_footer_n {
-    margin-top: -10px;
+    margin-top: 10px;
   }
   .livre_n {
     margin-bottom: 60px;
@@ -895,11 +910,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.default_div p::first-letter {
-  font-size: 30px;
-  /* font-weight: bold; */
-  padding: 6px 6px;
-}
+
 .cover_bloc_title {
   font-size: 70px;
   font-weight: bold;
@@ -909,20 +920,21 @@
 .Carte_pour_livre_a {
   margin-bottom: 20px;
   padding: 6px 18px;
-  /* border: 1px solid #e54d4d; */
-  /* border-radius: 20px; */
+  border: 1px solid #e54d4d;
   transition: 1s;
-  background-color: rgb(20, 18, 18);
-  color: rgb(205, 197, 197);
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
+  border-radius: 15px;
 }
 .Carte_pour_livre_a:hover {
-  border-radius: 5px;
+  background-color: rgb(20, 18, 18);
+  border: none;
+
+  color: rgb(205, 197, 197) !important;
 }
 /* medias querry 1*/
-@media (min-width: 988px) and (max-width: 1554px) {
+@media (min-width: 988px) and (max-width: 1054px) {
   .welcom_bloc {
     /* background-image: url("/3.png"); */
     height: 260px;
@@ -930,8 +942,7 @@
   .welcom_bloc p {
     top: 120px;
   }
-  .footer {
-    height: 300px;
+  /* .footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -957,7 +968,7 @@
 
     text-align: center;
     margin-top: 30px;
-  }
+  } */
 }
 @media (min-width: 978px) and (max-width: 1276px) {
   .caroussel_n {
@@ -978,7 +989,7 @@
     bottom: 0;
     margin: auto;
   }
-  .footer {
+  /* .footer {
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -1000,11 +1011,11 @@
     font-weight: bold;
   }
   .section2 {
-    width: 80%;
+    width: 50%;
     padding-left: 0%;
     text-align: center;
     margin-top: 30px;
-  }
+  } */
 }
 
 .pricingtable {
@@ -1041,8 +1052,8 @@
   border-radius: 12px;
   width: 100%;
   margin: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1057,11 +1068,11 @@
   } */
 
 .element:nth-of-type(2) {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .element .info h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 10px;
   text-align: center;
 }
@@ -1069,11 +1080,11 @@
 .element .info p {
   text-align: center;
   margin: 10px 20px;
-  font-size: 1rem;
+  font-size: 15px;
 }
 
 .element .price {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
@@ -1134,7 +1145,7 @@
   border-radius: 8px;
   padding: 6px 30px;
   margin: 10px;
-  font-weight: 400;
+  font-weight: 200;
   cursor: pointer;
 }
 
@@ -1286,9 +1297,9 @@
     align-items: center;
     justify-content: center;
   }
-  /* .section1 {
+  .section1 {
     padding-top: -90px;
-    width: 80%;
+    width: 100%;
     text-align: center;
   }
 
@@ -1300,12 +1311,13 @@
     font-weight: bold;
   }
   .section2 {
-    width: 80%;
+    width: 100%;
     padding-left: 0%;
 
     text-align: center;
-    margin-top: 30px;
-  } */
+    margin-top: 10px;
+    font-size: 12px;
+  }
 
   /* .Carte_pour_livre_containt {
     width: 100%;

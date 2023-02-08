@@ -3,7 +3,7 @@
 :root {
   /* --max-width: 1100px; */
   --border-radius: 12px;
-  --font-mono: "Poppins" sans-serif;
+  --font-mono: "Quicksand" sans-serif;
   --foreground-rgb: 1, 1, 1;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -98,6 +98,14 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #1b1b1b !important;
   text-decoration: none;
+  transition: 0.3s;
+  :hover {
+    color: #000000;
+    cursor: pointer !important ;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+  }
 }

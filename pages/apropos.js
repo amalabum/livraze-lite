@@ -25,9 +25,8 @@ export default function apropos() {
       <main className={styles.main}>
         <Navbar />
         <Other_banner
-          title="à propos "
-          subtitle="Nous somme la bibliothèque la plus moderne dans la ville"
-          action="procahaine soirée"
+          un="Un livre ne tombe jamais en panne  "
+          deux_n="mais un smartphone oui"
         ></Other_banner>
         <div className={styles.default_div}>
           <p>

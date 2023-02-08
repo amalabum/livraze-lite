@@ -34,7 +34,7 @@ const Homebaner = () => {
         <br />
         <span className="a_partir_de">à partir de 4,6$/mois</span>
         <br />
-        <Link href="s-abonner">
+        <Link href="tarifs">
           <button type="submit" className="call_to_action_price">
             Profiter de l'offre →
           </button>

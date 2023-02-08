@@ -15,6 +15,10 @@ import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const url_img =
+  "http://localhost/admin_livraze/Views/uploads-images/nos_livres/";
+const apiurl = "http://localhost/admin_livraze/api-v1?datas=livres_all";
+
 export default function livres({ livres }) {
   return (
     <>
@@ -31,7 +35,7 @@ export default function livres({ livres }) {
           <div className="container_mast_sub">
             {" "}
             <h2> Collection</h2>
-            <h3> congolaise. </h3>
+            <h3> internationnale. </h3>
           </div>
           <div className="custom-shape-divider-bottom-1675346632">
             <svg

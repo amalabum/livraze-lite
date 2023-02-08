@@ -26,14 +26,15 @@ export default function partenariat() {
         <Navbar />
         <Other_banner
           title="Soirée littéraire"
-          subtitle="des soirées qui reunissenr des esprits"
+          subtitle="des soirées qui reunissent des esprits"
         ></Other_banner>
         <div className={styles.default_div}>
           <img src="/en.png" className={styles.justifyed_img} />
-          <h1 className={styles.subtitle_n_sr}>
+          <h3 className="subtitle_n_s">
             {" "}
-            Pourquoi une soirée littéraire ?
-          </h1>
+            Les cercles littéraires de Livraze font rêver et réunissent des
+            auteurs nationaux !
+          </h3>
           <p>
             Afin de promouvoir la littérature locale et nationale, Livraze s'est
             donné pour mission d'organiser des cercles littéraires autour des
@@ -88,11 +89,34 @@ export default function partenariat() {
               parler du cinéma congolais.
             </li>
           </ul>
-
+          <h3 className="">Programmes soirées littéraires</h3>
+          <p>
+            Nos soirées littéraires ont lieu{" "}
+            <i> une fois par mois de 15h45 à 18h55.</i>
+          </p>
+          <p>15h45 - 16h45 : Accueil et cocktail (Gastronomie Congolaise)</p>
+          <p>
+            16h45 - 17h45 : Un livre, un auteur, Rencontre avec un auteur :
+            discussions et échanges autour de son œuvre.
+          </p>
+          <p>
+            17h45 - 17h55 : Musique live en lien avec l'univers de l'auteur.
+          </p>
+          <p>
+            17h55 - 18h25 : Expositions (photographes, dessinateurs, peintres et
+            cinéastes)
+          </p>
+          <p>
+            18h25 - 18h35 : Témoignages de librairies et bibliothèques
+            universitaires ou indépendantes
+          </p>
+          <p>
+            18h35 - 18h55 : Networking et signature des livres de l'auteur
+            autour d'un verre.
+          </p>
+          18h55 : Clôture de l'activité <br />
           <div className="call_to_action">
-            <Link href="">
-              <span className="action_on_link">Participer à la soirée →</span>
-            </Link>
+            <Link href="../soireeLitteraire">Prochaine soirée →</Link>
           </div>
         </div>
 

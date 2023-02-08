@@ -56,14 +56,7 @@ export default function partenariat() {
           </ul>
           <div>
             Voici comment vous pouvez nous aider :
-            <Link href="">Faites un Don à notre bibliothèque </Link>
-          </div>
-          <div className="call_to_action">
-            <Link href="presentationSoireeLitteraire">
-              <span className="action_on_link">
-                Pourquoi nous organisons des soirées littéraires ? →
-              </span>
-            </Link>
+            <Link href=""> Faites un Don à notre bibliothèque </Link>
           </div>
         </div>
 

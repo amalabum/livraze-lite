@@ -11,10 +11,13 @@ import Navbar from "@/components/header";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-// const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
+const url_img =
+  "http://livraze-admin.ritach.net/Views/uploads-images/nos_livres/";
+const unique_books = "http://livraze-admin.ritach.net/api-v1?livre=";
+const apiurls = "http://livraze-admin.ritach.net/api-v1?datas=livres_all";
 
 export default function detai_livre({ livre, livres }) {
-  console.log("livre.synthese s", livre);
   return (
     <>
       <Head>
@@ -25,30 +28,43 @@ export default function detai_livre({ livre, livres }) {
       </Head>
       <main className={styles.main}>
         <Navbar />
-        <Other_banner
-          title_n={livre.titre}
-          subtitle={`Oeuvre de ${livre.auteur}`}
-        />
+        <Other_banner title_n={livre.titre} />
         <div className="collections_list">
           <div className="section_une">
             <div className="livre_details">
               <div className="img_livre">
-                <Image
-                  src="/00.png"
-                  className="image_c"
-                  alt=""
-                  layout="fill"
-                  objectFit="contain"
-                />
+                <div className="img_cver">
+                  <img
+                    className=""
+                    src={`${url_img}${livre.couverture}`}
+                    alt=""
+                  />
+                </div>
+                <div className="img_cver_legende">
+                  <h5>Auteur : {livre.auteur}</h5>
+                  <h5> Maison d'édition : {livre.maison_d_edition}</h5>
+                  <h5> Categorie : {livre.designation}</h5>
+                  <div className={styles.Carte_pour_livre_footer_n}>
+                    <Link
+                      href="../tarifs"
+                      className={styles.Carte_pour_livre_a}
+                    >
+                      S'abonner
+                    </Link>
+                    <Link
+                      href={`https://wa.me/+243974242040?text=Bonjour livraze, je suis  interressé(s) par le livre :${livre.titre}, Est-il disponible pour une lecture? `}
+                      className={styles.whatsapp}
+                    >
+                      <img src="/icons/ic_lov.png" alt="" />
+                      <span className="whatsapp_color"> intéressant </span>
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="text_livre">
-                <h6> </h6>
-                {livre.synthese}
+              <div className="synth_livre_n"> {livre.synthese}</div>
+              <div className="synth_livre">
                 <div className={styles.Carte_pour_livre_footer_n}>
-                  <Link
-                    href="../s-abonner"
-                    className={styles.Carte_pour_livre_a}
-                  >
+                  <Link href="../tarifs" className="btn btn-success">
                     Profiter de l'offre
                   </Link>
                   <Link
@@ -56,139 +72,56 @@ export default function detai_livre({ livre, livres }) {
                     className={styles.whatsapp}
                   >
                     <img src="/icons/ic_lov.png" alt="" />
-                    <span> je veux lire ce livre </span>
+                    <span className="whatsapp_color">
+                      {" "}
+                      je veux lire ce livre{" "}
+                    </span>
                   </Link>
-                  <a href="" className={styles.whatsapp}></a>
                 </div>
               </div>
-              {/* <Image
-                    src="/00.png"
-                    className="image_c"
-                    alt=""
-                    layout="fill"
-                    objectFit="contain"
-                  /> */}
-              {/* <img
-                    className="couverture_img"
-                    src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
-                    alt=""
-                  /> */}
-
-              <div className="titre_section mt-5">
-                <h3>
-                  {" "}
-                  Collection <span> congolaise</span>{" "}
-                </h3>
-                Tous nos livres sont en dur...
+              <div className="voir_aussi"> Voir aussi </div>
+              <div className="cards_container ">
+                {livres?.livres?.slice(0, 9)?.map((item, index) => (
+                  <Link href={`${item.id}`}>
+                    <Carte_pour_livre
+                      key={index}
+                      nom_auteur={item.auteur}
+                      auteur_img_src="/icons/ecrivain.png"
+                      titre_l={item.titre.substr(0, 19)}
+                      livre_img_src={`${url_img}${item.couverture}`}
+                    />
+                  </Link>
+                ))}
               </div>
-
-              {/* <Link href="collection-congolaise" className={styles.proposal_action}>
-            Voir toutes nos collections →
-          </Link> */}
-              <br />
-              <br />
             </div>
           </div>
 
           <div className="section_deux">
             <div className="carousel_collections">
-              <Carousel variant="dark" indicators={false}>
-                {livres?.livres?.map((item, index) => (
-                  <Carousel.Item>
-                    {/* <img
-                      className="caroussels_img "
-                      src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${item.couverture}`}
-                      alt="First slide"
-                    /> */}
-                    <Image
-                      src="/00.png"
-                      className="caroussels_img"
-                      alt="Picture of the author"
-                      width={180}
-                      height={200}
-                      priority
-                    />
-                  </Carousel.Item>
-                ))}
-              </Carousel>
+              <Link href="">
+                <Image
+                  src="/livraze_add.jpg"
+                  className="caroussels_img"
+                  alt="Picture of the author"
+                  width={180}
+                  height={200}
+                  priority
+                />
+              </Link>
             </div>
             <div className="categories">
-              <h3> Categories </h3>
+              <h3> Plus consultés </h3>
               <ul>
-                <li>Droit</li>
-                <li> Economie</li>
-                <li> Sociologie</li>
-                <li> Technologie</li>
-                <li> categorie 1</li>
-                <li> categorie 1</li>
+                {livres?.livres?.slice(1, 9)?.map((item, index) => (
+                  <Link href={`../livres/${item.id}`}>
+                    <li>{item.titre} → </li>
+                  </Link>
+                ))}
               </ul>
             </div>
           </div>
         </div>
-        {/* <div className={styles.collections_n}>
-          <div className={styles.collections_n_section1}>
-            <div className={styles.livre_n_details}>
-              <div className={styles.livre_n_img_n}>
-                <img
-                  src={`http://localhost/fg-livraze/Views/uploads-images/nos_livres/${livre.couverture}`}
-                  className={styles.livre_x_img}
-                  alt=""
-                />
-              </div>
-              <div className={styles.livre_n_containt}>
-                <h2> </h2>
-                <div className={styles.Carte_pour_livre_header}>
-                  <div className={styles.Carte_pour_livre_section1}>
-                    <img src="/icons/auteur_ic.png" alt="" />
-                    Auteur : {livre.auteur}
-                    <h4>#droit, #Sociologie </h4>
-                  </div>
-                </div>
-                {livre.synthese}
-                <br />
-                <br />
-              </div>
-            </div>
-            <div className={styles.Carte_pour_livre_footer_n}>
-              <Link href="" className={styles.Carte_pour_livre_a}>
-                Profiter de l'offre
-              </Link>
-              <a href="" className={styles.whatsapp}>
-                <img src="/icons/ic_lov.png" alt="" />
-                <span> je veux lire ce livre </span>
-              </a>
-              <a href="" className={styles.whatsapp}></a>
-            </div>
-          </div>
-           <div className={styles.collections_n_section2}>
-            <h4>Toutes les categories </h4>
-            <ul href="" className={styles.liste_des_categorie}>
-              <a>
-                <li>
-                  Droit
-                  <span>(2)</span>
-                </li>
-              </a>
-              <a>
-                <li>
-                  Economie
-                  <span>(2)</span>
-                </li>
-              </a>
-              <a>
-                <li>
-                  Socilogie
-                  <span>(2)</span>
-                </li>
-              </a>
-            </ul>
-            <img src="/00.png" alt="" />
-          </div>
-        </div>
-        <div className="call_to_action"></div>
-        <div className={styles.default_div}>
-       
-        </div> */}
+
         <Footer />
         <Copyright />
       </main>
@@ -200,17 +133,11 @@ export const getServerSideProps = async ({ params }) => {
   const router = params;
   const { id } = router;
 
-  const res = await fetch(
-    `http://bibliotheque-api.ritach.net/?key=98986Z_HCC8765&livre=${id}`
-  );
-  const resb = await fetch(
-    "http://bibliotheque-api.ritach.net/?key=98986Z_HCC8765&datas=livres"
-  );
+  const request_for_unique_book = await fetch(`${unique_books}${id}`);
+  const resquest_for_all_books = await fetch(apiurls);
 
-  const livre = await res.json();
-  const livres = await resb.json();
-  console.log("livre  det", livre);
-
+  const livre = await request_for_unique_book.json();
+  const livres = await resquest_for_all_books.json();
   return {
     props: {
       livre,
