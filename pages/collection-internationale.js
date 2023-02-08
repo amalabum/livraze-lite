@@ -140,7 +140,7 @@ export default function livres({ livres }) {
 
 export const getServerSideProps = async () => {
   const res = await fetch(
-    "http://livraze-admin.ritach.net/api-v1?datas=livres_congolais"
+    "http://livraze-admin.ritach.net/api-v1?datas=livres_all"
   );
 
   const livres = await res.json();
