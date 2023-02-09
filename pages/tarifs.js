@@ -48,7 +48,7 @@ export default function Home() {
                 </p>
               </div>
               <span className={styles.price}>4.6$/mois</span>
-              <Link href="s-abonner">
+              <Link href="../etudiant">
                 <button className={styles.btn_1}>S'abonner</button>
               </Link>
             </div>
@@ -69,7 +69,7 @@ export default function Home() {
                 </p>
               </div>
               <span className={styles.price}>11,99$/mois</span>
-              <Link href="s-abonner">
+              <Link href="../premium">
                 <button className={styles.btn_2}>S'abonner</button>
               </Link>
             </div>
@@ -86,7 +86,7 @@ export default function Home() {
                 </p>
               </div>
               <span className={styles.price}>9.99$/mois</span>
-              <Link href="s-abonner">
+              <Link href="../standard">
                 <button className={styles.btn_3}>S'abonner</button>
               </Link>
             </div>

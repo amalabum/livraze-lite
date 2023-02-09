@@ -14,7 +14,7 @@ import Carte_pour_livre from "@/components/collection_congolaise";
 import { post } from "jquery";
 import Link from "next/link";
 
-export default function Home({ livres }) {
+export default function Home({ livres, livres_congolais }) {
   return (
     <>
       <Head>
@@ -29,11 +29,11 @@ export default function Home({ livres }) {
       <main className={styles.main}>
         <div className="call_to_action_don_livre">
           <div className={styles.proposal}>
-            <h2>
+            <h1>
               {" "}
               « Vous pouvez nous enprumter <br />
               ou vendre vos livres ici »{" "}
-            </h2>{" "}
+            </h1>{" "}
             <br />
             <br />
             <a href="/collection-congolaise" className={styles.proposal_action}>
@@ -104,20 +104,22 @@ export default function Home({ livres }) {
 
         <div className={styles.our_collection}>
           <div className="titre_section mt-5">
-            <h3> Nos Collections</h3>
+            <h3> Collections congolais</h3>
           </div>
           <div className="cards_container ">
-            {livres?.livres?.slice(0, 10)?.map((item, index) => (
-              <Link href={`livres/${item.id}`}>
-                <Carte_pour_livre
-                  key={index}
-                  nom_auteur={item.auteur}
-                  auteur_img_src="/icons/ecrivain.png"
-                  titre_l={item.titre}
-                  livre_img_src={`http://livraze-admin.ritach.net/Views/uploads-images/nos_livres/${item.couverture}`}
-                />
-              </Link>
-            ))}
+            {livres_congolais?.livres_congolais
+              ?.slice(0, 10)
+              ?.map((item, index) => (
+                <Link href={`livres/${item.id}`}>
+                  <Carte_pour_livre
+                    key={index}
+                    nom_auteur={item.auteur}
+                    auteur_img_src="/icons/ecrivain.png"
+                    titre_l={item.titre}
+                    livre_img_src={`http://livraze-admin.ritach.net/Views/uploads-images/nos_livres/${item.couverture}`}
+                  />
+                </Link>
+              ))}
           </div>
           <div className={styles.call_to_action}>
             <Link href="collection-congolaise">
@@ -137,10 +139,15 @@ export const getServerSideProps = async () => {
   const res = await fetch(
     "http://livraze-admin.ritach.net/api-v1?datas=livres_all"
   );
+  const congo = await fetch(
+    "http://livraze-admin.ritach.net/api-v1?datas=livres_congolais"
+  );
   const livres = await res.json();
+  const livres_congolais = await congo.json();
   return {
     props: {
       livres,
+      livres_congolais,
     },
   };
 };
