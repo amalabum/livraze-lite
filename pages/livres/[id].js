@@ -32,18 +32,18 @@ export default function detai_livre({ livre, livres }) {
         <div className="collections_list">
           <div className="section_une">
             <div className="livre_details">
-              <div className="img_livre">
-                <div className="img_cver">
+              <div className="livre_header">
+                <div className="img_cover_details">
                   <img
                     className=""
                     src={`${url_img}${livre.couverture}`}
                     alt=""
                   />
                 </div>
-                <div className="img_cver_legende">
-                  <h5>Auteur : {livre.auteur}</h5>
-                  <h5> Maison d'édition : {livre.maison_d_edition}</h5>
-                  <h5> Categorie : {livre.designation}</h5>
+                <div className="img_cover_legende">
+                  <h6>Auteur : {livre.auteur} </h6>
+                  <h6> Maison d'édition : {livre.maison_d_edition}</h6>
+                  <h6> Catégorie : {livre.designation}</h6>
                   <div className={styles.Carte_pour_livre_footer_n}>
                     <Link
                       href="../tarifs"
@@ -61,7 +61,7 @@ export default function detai_livre({ livre, livres }) {
                   </div>
                 </div>
               </div>
-              <div className="synth_livre_n"> {livre.synthese}</div>
+              <div className="synthese_livre_n">{livre.synthese}</div>
               <div className="synth_livre">
                 <div className={styles.Carte_pour_livre_footer_n}>
                   <Link href="../tarifs" className="btn btn-success">
@@ -87,7 +87,7 @@ export default function detai_livre({ livre, livres }) {
                       key={index}
                       nom_auteur={item.auteur}
                       auteur_img_src="/icons/ecrivain.png"
-                      titre_l={item.titre.substr(0, 19)}
+                      titre_l={item.titre}
                       livre_img_src={`${url_img}${item.couverture}`}
                     />
                   </Link>

@@ -10,6 +10,7 @@ import Item_top_5 from "@/components/compsants_standards";
 import List_items from "@/components/List_items";
 import Nav_bar from "../components/navbar";
 import Link from "next/link";
+import Carousel from "react-bootstrap/Carousel";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -28,30 +29,89 @@ export default function partenariat() {
           title="Soirée littéraire"
           subtitle="des soirées qui reunissent des esprits"
         ></Other_banner>
-        <div className={styles.default_div}>
+        <div className={styles.default_divs}>
           <div className="intro_soiree_container_details">
-            <div className="section_img"></div>
+            <div className="section_img">
+              <div className="carousse_soiree">
+                <Carousel
+                  fade
+                  indicators={false}
+                  prevIcon={false}
+                  nextIcon={false}
+                >
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src="1livr.png"
+                      alt="First slide"
+                    />
+                    <Carousel.Caption></Carousel.Caption>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src="gastronomie.png"
+                      alt="Second slide"
+                    />
+
+                    <Carousel.Caption></Carousel.Caption>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src="2livr.png"
+                      alt="Third slide"
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </div>
+            </div>
             <div className="section_text">
-              <div className="DATE">
+              {/* <div className="DATE">
                 <div className="jour">
                   18
                   <div className="mois">janvier</div>{" "}
                 </div>{" "}
-              </div>
+              </div> */}
               <h2>
                 Soirée <span className="text_coloric">Littéraire</span>
                 <span className="dot">.</span>
               </h2>
-              <h5>
-                Sous le Thème <b>Safari !</b>
-              </h5>
-              Afin de promouvoir la littérature locale et nationale, Livraze
-              s'est donné pour mission d'organiser des cercles littéraires
-              autour des livres des auteurs congolais de la diaspora ou vivant
-              au pays. Les soirées de Livraze sont festives et elles réunissent
-              des auteurs nationaux devant un public d'étudiants,
-              d'entrepreneurs, d'avocats, de médecins, d'enseignants, de
-              commerçants... <br />
+              <h3>
+                La première soirée Littéraire de Livraze autour du livre :{" "}
+                <b>Créer son entreprise sans argent.</b>
+              </h3>
+              Aujourd’hui, comme dans plusieurs villes de la RDC, les jeunes
+              s’intéressent à l’entrepreneuriat mais peu sont ceux qui se
+              lancent malgré les contraintes financières. Ce guide de poche pour
+              l’entrepreneur va nous permettre de prendre ce choix au sérieux et
+              de se focaliser sur son projet. Pendant la présentation de ce
+              livre par l’auteur, vous aurez mille et une raisons d’embrasser le
+              domaine entrepreneurial.
+              <br />
+              <h5>Biographie de l’auteur :</h5>
+              Dr. Yves Daniel L.
+              <br /> Ngavan Master en Développement Organisationnel ( Université
+              Laval-Québec-Canada), Spécialiste Senior en Gestion des ressources
+              Humaines et Coach en Entrepreneuriat avec plus de 12 ans
+              d’expérience professionnelle.
+              <br /> Consultant-Formateur en Management des projets, suivi et
+              évaluation auprès des ONG et programmes de coopérations
+              internationales.
+              <h5> A la découverte de la Culture Rega : </h5> Les Lega sont une
+              population forestière bantoue d'Afrique centrale, établie
+              principalement en République démocratique du Congo (RDC), à l'Est
+              du fleuve Lwalaba (le fleuve Congo), jusqu'en altitude dans les
+              monts Mitumba, dans les provinces du Nord-Kivu, du Sud-Kivu et du
+              Maniema. Le totem des Lega est le pangolin. <br /> Nous allons en
+              plus découvrir la GASTRONOMIE REGA…
+              <h5>Slam : </h5> Entreprendre, Fonder sa boite, engager la
+              jeunesse, continuer à rêver grand pour nos communautés. Pendant la
+              soirée, nous serons amenés à la découverte de l’art de la musique
+              par Franck Amir, clameur, écrivain et poète.
+              <h5>Peinture : </h5> Chaque culture a ses couleurs, Découvrez les
+              tableaux magnifiques peints par D. Bolton qui vont surement vous
+              envoyer dans le profondeur de vos souvenirs.
             </div>
           </div>
           <h3 className="">Programmes soirées littéraires</h3>
@@ -59,29 +119,27 @@ export default function partenariat() {
             Nos soirées littéraires ont lieu{" "}
             <i> une fois par mois de 15h45 à 18h55.</i>
           </p>
-          <p>15h45 - 16h45 : Accueil et cocktail (Gastronomie Congolaise)</p>
           <p>
-            16h45 - 17h45 : Un livre, un auteur, Rencontre avec un auteur :
-            discussions et échanges autour de son œuvre.
+            15h45 - 16h45 : Accueil et cocktail Gastronomie Rega avec Maison
+            Traiteur{" "}
           </p>
           <p>
-            17h45 - 17h55 : Musique live en lien avec l'univers de l'auteur.
+            16h45 - 17h45 : UDiscussions et échanges autour du Livre Comment
+            créer une entreprise sans argent du Dr. Yves Daniel.
           </p>
+          <p>17h45 - 17h55 : Musique/Slam avec Franck Amak.</p>
           <p>
             17h55 - 18h25 : Expositions (photographes, dessinateurs, peintres et
             cinéastes)
           </p>
+          <p>18h25 - 18h35 : Expositions Dessin avec D. Blton</p>
           <p>
-            18h25 - 18h35 : Témoignages de librairies et bibliothèques
-            universitaires ou indépendantes
+            18h35 - 18h55 : Networking autour d'un verre. 18h55 : Clôture de
+            l'activité
           </p>
-          <p>
-            18h35 - 18h55 : Networking et signature des livres de l'auteur
-            autour d'un verre.
-          </p>
-          18h55 : Clôture de l'activité <br />
-          <div className="call_to_action">
-            <Link href="">Participer à la soirée →</Link>
+          <br />
+          <div className="call_to_action ">
+            <Link href="#">Participer à la soirée →</Link>
           </div>
         </div>
 

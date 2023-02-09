@@ -681,9 +681,9 @@ a :hover {
 }
 .intro_soiree_container_details .section_img {
   width: 100%;
-  height: 400px;
+  object-fit: fill;
+  padding: 0 !important;
   position: relative;
-  background-image: url("/child.jpg");
   background-size: cover;
 }
 @media (min-width: 0) and (max-width: 739px) {
@@ -711,21 +711,20 @@ a :hover {
     padding-top: 20px;
   }
 }
-.intro_soiree_container_details .section_text h2 {
-  font-weight: 900;
+.intro_soiree_container_details .section_text h3 {
+  font-weight: 500;
   text-transform: uppercase;
 }
 
-.section_img {
+.section_imgs {
   width: 40%;
-  height: 40px;
   position: relative;
   height: auto;
-  background-image: url("/child.jpg");
+  background-image: url("/1livr.png");
   background-size: cover;
 }
 @media (min-width: 0) and (max-width: 739px) {
-  .section_img {
+  .section_imgs {
     width: 100%;
     min-height: 200px;
   }
@@ -768,6 +767,7 @@ a :hover {
   .DATE {
     top: -80px;
     left: 68%;
+    display: none;
   }
 }
 .DATE .jour {
@@ -837,6 +837,15 @@ a :hover {
 
 .dot {
   font-size: 50px;
+}
+
+.caroussel_soiree {
+  height: 100%;
+}
+
+h5,
+h3 {
+  padding-top: 20px !important;
 }
 
 .team {
@@ -1111,6 +1120,8 @@ a :hover {
 }
 
 .synth_livre_n {
+  background-color: red;
+  margin-top: 400px;
   padding-top: 20px;
 }
 @media (min-width: 1000px) {
@@ -1123,6 +1134,31 @@ a :hover {
 .voir_aussi {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.livre_details {
+  position: relative;
+  width: 100%;
+}
+
+.livre_header {
+  display: flex;
+}
+.livre_header .img_cover_legende {
+  padding-top: 30px;
+  font-size: 18px;
+}
+
+.img_cover_details {
+  width: 30%;
+}
+.img_cover_details img {
+  width: 90%;
+}
+
+.synthese_livre_n {
+  width: 90%;
+  margin-top: 30px;
 }
 
 .default_div {

@@ -192,6 +192,8 @@
   font-weight: normal;
 }
 .synth_livre_n {
+  background-color: red;
+  margin-top: 400px;
   padding-top: 20px;
   @media (min-width: 1000px) {
     padding-right: 80px;
@@ -202,4 +204,25 @@
 .voir_aussi {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+.livre_details {
+  position: relative;
+  width: 100%;
+}
+.livre_header {
+  display: flex;
+  .img_cover_legende {
+    padding-top: 30px;
+    font-size: 18px;
+  }
+}
+.img_cover_details {
+  width: 30%;
+  img {
+    width: 90%;
+  }
+}
+.synthese_livre_n {
+  width: 90%;
+  margin-top: 30px;
 }

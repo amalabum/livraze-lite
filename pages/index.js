@@ -70,7 +70,7 @@ export default function Home({ livres }) {
           </div>
 
           <div className="intro_soiree_container">
-            <div className="section_img"></div>
+            <div className="section_imgs"></div>
             <div className="section_text">
               <div className="DATE">
                 <div className="jour">
@@ -82,16 +82,19 @@ export default function Home({ livres }) {
                 Soirée <span className="text_coloric">Littéraire</span>
                 <span className="dot">.</span>
               </h2>
-              <h5>
-                Sous le Thème <b>Safari !</b>
-              </h5>
-              Afin de promouvoir la littérature locale et nationale, Livraze
-              s'est donné pour mission d'organiser des cercles littéraires
-              autour des livres des auteurs congolais de la diaspora ou vivant
-              au pays. Les soirées de Livraze sont festives et elles réunissent
-              des auteurs nationaux devant un public d'étudiants,
-              d'entrepreneurs, d'avocats, de médecins, d'enseignants, de
-              commerçants... <br />
+              <h3>
+                La première soirée Littéraire de Livraze autour du livre :{" "}
+                <b>Créer son entreprise sans argent.</b>
+              </h3>{" "}
+              <br />
+              Aujourd’hui, comme dans plusieurs villes de la RDC, les jeunes
+              s’intéressent à l’entrepreneuriat mais peu sont ceux qui se
+              lancent malgré les contraintes financières. Ce guide de poche pour
+              l’entrepreneur va nous permettre de prendre ce choix au sérieux et
+              de se focaliser sur son projet. Pendant la présentation de ce
+              livre par l’auteur, vous aurez mille et une raisons d’embrasser le
+              domaine entrepreneurial...
+              <br />
               <div className="call_to_action">
                 <Link href="../soireeLitteraire">En savoir plus →</Link>
               </div>
