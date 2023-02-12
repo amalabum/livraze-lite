@@ -45,11 +45,10 @@
 }
 
 .home_baner {
-  /* background-image: url("/3.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 9;
-  height: 390px;
+  height: 300px;
   width: 100%;
   color: black;
   overflow: hidden;
@@ -632,6 +631,19 @@ a :hover {
   padding: 0 0.6em;
 }
 
+.card_auth {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.card_auth .img_card_auth {
+  margin-right: 20px;
+}
+.card_auth .bio_card_auth {
+  font-size: 13px;
+  padding-top: 4px;
+}
+
 .action_on_link {
   font-size: 15px;
   color: #00000f;
@@ -720,8 +732,9 @@ a :hover {
   width: 40%;
   position: relative;
   height: auto;
-  background-image: url("/1livr.png");
-  background-size: cover;
+  background-image: url("/pubsoireelivraze.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 @media (min-width: 0) and (max-width: 739px) {
   .section_imgs {
@@ -968,6 +981,8 @@ h3 {
 .collections_list .section_une .livre .synthese h3 {
   font-size: 19px;
   font-weight: bold;
+  text-transform: capitalize;
+  margin-top: -20px;
 }
 .collections_list .section_une .livre .synthese h5 {
   font-size: 13px;
@@ -1023,7 +1038,6 @@ h3 {
   .collections_list .section_une .livre .synthese {
     position: relative;
     width: 70%;
-    padding-top: 20px;
     padding-left: 5px;
     padding-right: 5px;
     font-size: 11px;
@@ -1092,7 +1106,6 @@ h3 {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: red;
 }
 
 .img_cver {
@@ -1120,7 +1133,6 @@ h3 {
 }
 
 .synth_livre_n {
-  background-color: red;
   margin-top: 400px;
   padding-top: 20px;
 }
@@ -1145,7 +1157,7 @@ h3 {
   display: flex;
 }
 .livre_header .img_cover_legende {
-  padding-top: 30px;
+  padding-top: 0px;
   font-size: 18px;
 }
 
@@ -1159,6 +1171,10 @@ h3 {
 .synthese_livre_n {
   width: 90%;
   margin-top: 30px;
+}
+
+.cards_container {
+  padding-bottom: 20px;
 }
 
 .default_div {
@@ -1218,6 +1234,55 @@ h3 {
 
 .btn {
   color: #f9f9f9 !important;
+}
+
+.auteur_infos {
+  position: relative;
+  width: 100%;
+}
+.auteur_infos .avatar {
+  position: relative;
+  width: 30%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 13px;
+}
+.auteur_infos .avatar .img_autors {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.auteur_infos .bio {
+  width: 70%;
+  position: relative;
+  padding: 0em 1em;
+  float: left;
+}
+.auteur_infos .bio h3 {
+  margin-top: -20px;
+}
+.auteur_infos .bio p {
+  color: rgb(29, 28, 28);
+}
+.auteur_infos .livres {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.toutes_les_collections {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.toutes_les_collections a {
+  border: 1px solid black;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+.toutes_les_collections a:hover {
+  background-color: black;
+  color: white !important;
 }
 
 /*# sourceMappingURL=globals.css.map */

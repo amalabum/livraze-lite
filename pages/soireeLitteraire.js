@@ -25,10 +25,7 @@ export default function partenariat() {
       </Head>
       <main className={styles.main}>
         <Navbar />
-        <Other_banner
-          title="Soirée littéraire"
-          subtitle="des soirées qui reunissent des esprits"
-        ></Other_banner>
+
         <div className={styles.default_divs}>
           <div className="intro_soiree_container_details">
             <div className="section_img">
@@ -59,7 +56,7 @@ export default function partenariat() {
                   <Carousel.Item>
                     <img
                       className="d-block w-100"
-                      src="2livr.png"
+                      src="./LIVRAZEWEBFORMAT2.png"
                       alt="Third slide"
                     />
                   </Carousel.Item>

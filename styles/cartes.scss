@@ -71,3 +71,17 @@
 .text_livre {
   padding: 0 0.6em;
 }
+
+.card_auth {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  .img_card_auth {
+    margin-right: 20px;
+  }
+  .bio_card_auth {
+    font-size: 13px;
+    padding-top: 4px;
+  }
+}

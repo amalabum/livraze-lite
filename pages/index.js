@@ -14,7 +14,7 @@ import Carte_pour_livre from "@/components/collection_congolaise";
 import { post } from "jquery";
 import Link from "next/link";
 
-export default function Home({ livres, livres_congolais }) {
+export default function Home({ livres_a, livres }) {
   return (
     <>
       <Head>
@@ -50,7 +50,7 @@ export default function Home({ livres, livres_congolais }) {
           </div>
           <div className={styles.relative_bloc}>
             <div className="cards_container">
-              {livres?.livres?.slice(0, 9)?.map((item, index) => (
+              {livres?.livres?.slice(0, 10)?.map((item, index) => (
                 <Link href={`livres/${item.id}`}>
                   <Carte_pour_livre
                     key={index}
@@ -64,9 +64,7 @@ export default function Home({ livres, livres_congolais }) {
             </div>
           </div>
           <div className={styles.call_to_action}>
-            <Link href="collection-congolaise">
-              Voir toutes les collections →
-            </Link>
+            <Link href="collection-congolaise">Voir toute la collection →</Link>
           </div>
 
           <div className="intro_soiree_container">
@@ -104,28 +102,27 @@ export default function Home({ livres, livres_congolais }) {
 
         <div className={styles.our_collection}>
           <div className="titre_section mt-5">
-            <h3> Collections congolais</h3>
+            <h5>Voir aussi</h5>
           </div>
-          <div className="cards_container ">
-            {livres_congolais?.livres_congolais
-              ?.slice(0, 10)
-              ?.map((item, index) => (
-                <Link href={`livres/${item.id}`}>
-                  <Carte_pour_livre
-                    key={index}
-                    nom_auteur={item.auteur}
-                    auteur_img_src="/icons/ecrivain.png"
-                    titre_l={item.titre}
-                    livre_img_src={`http://livraze-admin.ritach.net/Views/uploads-images/nos_livres/${item.couverture}`}
-                  />
-                </Link>
-              ))}
+          <div className="cards_container">
+            {livres?.livres?.slice(10, 20)?.map((item, index) => (
+              <Link href={`livres/${item.id}`}>
+                <Carte_pour_livre
+                  key={index}
+                  nom_auteur={item.auteur}
+                  auteur_img_src="/icons/ecrivain.png"
+                  titre_l={item.titre}
+                  livre_img_src={`http://livraze-admin.ritach.net/Views/uploads-images/nos_livres/${item.couverture}`}
+                />
+              </Link>
+            ))}
           </div>
           <div className={styles.call_to_action}>
             <Link href="collection-congolaise">
               Voir toutes les collections →
             </Link>
           </div>
+
           <br />
         </div>
         <Footer> </Footer>
@@ -134,20 +131,24 @@ export default function Home({ livres, livres_congolais }) {
     </>
   );
 }
-
+{
+  let url = "http://localhost/fidbagraphics/2023/janvier/livraze/back-office";
+  let online = "livraze-admin.ritach.net";
+}
 export const getServerSideProps = async () => {
   const res = await fetch(
     "http://livraze-admin.ritach.net/api-v1?datas=livres_all"
   );
+
   const congo = await fetch(
     "http://livraze-admin.ritach.net/api-v1?datas=livres_congolais"
   );
   const livres = await res.json();
-  const livres_congolais = await congo.json();
+  const livres_a = await congo.json();
+  console.log("livres_a:", livres_a);
   return {
     props: {
       livres,
-      livres_congolais,
     },
   };
 };

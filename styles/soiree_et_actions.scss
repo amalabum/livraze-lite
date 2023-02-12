@@ -83,8 +83,9 @@
   // height: 400px;
   position: relative;
   height: auto;
-  background-image: url("/1livr.png");
-  background-size: cover;
+  background-image: url("/pubsoireelivraze.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   @media (min-width: 0) and (max-width: 739px) {
     width: 100%;
     min-height: 200px;

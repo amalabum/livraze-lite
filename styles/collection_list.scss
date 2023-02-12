@@ -28,6 +28,9 @@
         h3 {
           font-size: 19px;
           font-weight: bold;
+          text-transform: capitalize;
+
+          margin-top: -20px;
         }
         h5 {
           font-size: 13px;
@@ -89,7 +92,7 @@
         .synthese {
           position: relative;
           width: 70%;
-          padding-top: 20px;
+
           padding-left: 5px;
           padding-right: 5px;
           font-size: 11px;
@@ -166,7 +169,6 @@
   position: relative;
   width: 100%;
   height: auto;
-  background-color: red;
 }
 
 .img_cver {
@@ -192,14 +194,12 @@
   font-weight: normal;
 }
 .synth_livre_n {
-  background-color: red;
   margin-top: 400px;
   padding-top: 20px;
   @media (min-width: 1000px) {
     padding-right: 80px;
     position: relative;
   }
-  // text-align: justify;
 }
 .voir_aussi {
   margin-top: 40px;
@@ -212,7 +212,7 @@
 .livre_header {
   display: flex;
   .img_cover_legende {
-    padding-top: 30px;
+    padding-top: 0px;
     font-size: 18px;
   }
 }
@@ -225,4 +225,7 @@
 .synthese_livre_n {
   width: 90%;
   margin-top: 30px;
+}
+.cards_container {
+  padding-bottom: 20px;
 }
