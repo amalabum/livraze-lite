@@ -64,12 +64,7 @@ export default function partenariat() {
               </div>
             </div>
             <div className="section_text">
-              {/* <div className="DATE">
-                <div className="jour">
-                  18
-                  <div className="mois">janvier</div>{" "}
-                </div>{" "}
-              </div> */}
+           
               <h2>
                 Soirée <span className="text_coloric">Littéraire</span>
                 <span className="dot">.</span>
